@@ -194,8 +194,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-					<h2>Visi Misi</h2>
-					<p>Visi Misi Pesantren Daarul Qolam</p>
+					<h2>Visi Misi Tujuan</h2>
+					<p>Visi Misi & Tujuan Pendidikan Pesantren Daarul Qolam</p>
 				</div>
 			</div>
 		</div>
@@ -211,8 +211,8 @@
 					<div class="td-right">
 						<h3>Visi dan Misi</h3>
 						<ul>
-							<li><strong>Visi</strong><p>Mewujudkan dan membangun serta menciptakan anak didik untuk menjadi generasi Qur'ani yang seimbang dalam penguasaan IPTEK dan IMTAQ serta mewujudkan generasi yang bermoral dan berakhlakul karimah</p></li>
-                            <li><strong>Misi</strong><p>menciptakan, mewujudkan serta meningkatkan penghayatan dan pendalaman etika keagamaan dan ilmu pengetahuan melalui :</p></li>
+							<li><strong>Visi :</strong><p>Mewujudkan dan membangun serta menciptakan anak didik untuk menjadi generasi Qur'ani yang seimbang dalam penguasaan IPTEK dan IMTAQ serta mewujudkan generasi yang bermoral dan berakhlakul karimah</p></li>
+                            <li><strong>Misi :</strong><p>menciptakan, mewujudkan serta meningkatkan penghayatan dan pendalaman etika keagamaan dan ilmu pengetahuan melalui :</p></li>
                             <li><strong>1.</strong><p>Peningkatan Kualitas Pendidikan Umum dan Agama</p></li>
                             <li><strong>2.</strong><p>Peningkatan Kualitas Ibadah Keagamaan</p></li>
                             <li><strong>3.</strong><p>Peningkatan Wawasan dan Kecerdasan Emosional</p></li>
@@ -221,7 +221,17 @@
                             <li><strong>6.</strong><p> Peningkatan pengabdian diri di bidang karya positif serta di dukung dengan rasa penuh keikhlasan</p></li>
                         </ul>
                     </div>
-				</div>
+                </div>
+                <div class="trainer-info">
+                    <div class="td-right">
+                        <h3>Tujuan Pendidikan</h3>
+                        <ul>
+                            <li><strong>1.</strong><p>Memberikan bekal kemampuan dasar, pengetahuan dan keterampilan dasar yang bermanfaat bagi siswa, sesuai dengan mata pelajaran berdasarkan kurikulum Kementerian Pendidikan Nasional dan Kementerian Agama juga kurikulum Pondok Pesantren</p></li>
+                            <li><strong>2.</strong><p>Memberikan bekal kemampuan dasar tentang agama Islam dan pengamalannya sesuai dengan tingkat perkembangannnya serta memperisiapkan siswa untuk dapat mengikuti dan melanjutkan pendidikan ke jenjang yang lebih tinggi</p></li>
+                            <li><strong>3.</strong><p>Membina siswa  untuk menjadi insan yang berakhlakul karimah dan beraqidah Islam yang kuat</p></li>
+                        </ul>
+                    </div>
+                </div>
 
 	<!-- Footer Section -->
 	<footer class="footer-section">

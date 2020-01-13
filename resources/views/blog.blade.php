@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Ahana | Yoga HTML Template</title>
+	<title>Pesantren Daarul Qolam</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Ahana Yoga HTML Template">
 	<meta name="keywords" content="yoga, html">
@@ -74,7 +74,7 @@
 			</div>
 			<div class="container">
 				<ul class="main-menu">
-					<li><a href="index">Home</a></li>
+					<li><a href="index">Beranda</a></li>
 					<li><a href="about">About</a></li>
 					<li><a href="classes">Classes</a>
 						<ul class="sub-menu">
@@ -84,8 +84,8 @@
 					</li>
 					<li><a href="trainer">trainers</a>
 						<ul class="sub-menu">
-							<li><a href="trainer">Our Trainers</a></li>
-							<li><a href="trainer-details">Trainers Details</a></li>
+							<li><a href="trainer">Materi Pendidikan</a></li>
+							<li><a href="trainer-details">Visi Misi & Tujuan Pendidikan</a></li>
 						</ul>
 					</li>
 					<li><a href="events">events</a>
@@ -94,9 +94,9 @@
 							<li><a href="event-details">Events Details</a></li>
 						</ul>
 					</li>
-					<li><a href="blog" class="active">Blog</a>
+					<li><a href="blog" class="active">Galeri</a>
 						<ul class="sub-menu">
-							<li><a href="blog">Our Blog</a></li>
+							<li><a href="blog">Galeri</a></li>
 							<li><a href="single-blog">Blog Details</a></li>
 						</ul>
 					</li>
@@ -194,9 +194,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-					<h2>Blog gird</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
+                    <h2>Galeri</h2>
+                    <p>Pesantren Daarul Qolam</p>
+                </div>
 			</div>
 		</div>
 	</section>
@@ -208,216 +208,90 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/1.jpg" alt="">
+						<img src="/frontend/ahana/img/blog/12.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">Yoga for Slim Physique</a></h2>
-							<p>Regular practice with breathing tech-niques in Yoga will help you get a toned body, this is the perfect choice</p>
+							<h2><a href="single-blog">Halaman Depan Sekolah</a></h2>
+							<p>Dengan fasilitas lapang dan tempat upacara</p>
 						</div>
-						<div class="bi-footer">
-							<div class="bi-cata">Health & Beauty</div>
-							<div class="bi-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-							</div>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/11.jpg" alt="">
+						<div class="bi-text">
+							<h2><a href="single-blog">Halaman Parkiran Masjid</a></h2>
+							<p>Dengan fasilitas aula, taman dan lapangan parkir</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/2.jpg" alt="">
+						<img src="/frontend/ahana/img/blog/13.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">The Perfect Dose</a></h2>
-							<p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain</p>
-						</div>
-						<div class="bi-footer">
-							<div class="bi-cata">Health & Beauty</div>
-							<div class="bi-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-							</div>
+							<h2><a href="single-blog">Tempat Beribadah (Masjid)</a></h2>
+							<p>Dengan fasilitas tempat wudhu, mukena dan alat solat</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/3.jpg" alt="">
+						<img src="/frontend/ahana/img/blog/14.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">Flexible Body</a></h2>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis prae-sentium voluptatum deleniti</p>
-						</div>
-						<div class="bi-footer">
-							<div class="bi-cata">Health & Beauty</div>
-							<div class="bi-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-							</div>
+							<h2><a href="single-blog">Asrama</a></h2>
+							<p>Dengan fasilitas tempat tidur, selimut dan bantal</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/4.jpg" alt="">
+						<img src="/frontend/ahana/img/blog/15.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">The Secret to Improving</a></h2>
-							<p>Regular practice with breathing tech-niques in Yoga will help you get a toned body, this is the perfect choice</p>
-						</div>
-						<div class="bi-footer">
-							<div class="bi-cata">Health & Beauty</div>
-							<div class="bi-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-							</div>
+							<h2><a href="single-blog">Kantin</a></h2>
+							<p>Dengan fasilitas meja makan serta terdapat tempat cuci tangan</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/5.jpg" alt="">
+						<img src="/frontend/ahana/img/blog/16.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">Movements for Slim</a></h2>
-							<p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain</p>
-						</div>
-						<div class="bi-footer">
-							<div class="bi-cata">Health & Beauty</div>
-							<div class="bi-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-							</div>
+							<h2><a href="single-blog">Ruang Komputer</a></h2>
+							<p>Dengan fasilitas komputer serta terdapat printer untuk santri</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/6.jpg" alt="">
+						<img src="/frontend/ahana/img/blog/17.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">Update Training Trend</a></h2>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis prae-sentium voluptatum deleniti</p>
-						</div>
-						<div class="bi-footer">
-							<div class="bi-cata">Health & Beauty</div>
-							<div class="bi-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-							</div>
+							<h2><a href="single-blog">Ruang Kelas</a></h2>
+							<p>Dengan fasilitas meja, kursi serta papan tulis</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/7.jpg" alt="">
+						<img src="/frontend/ahana/img/blog/18.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">Have a Toned Body</a></h2>
-							<p>Regular practice with breathing tech-niques in Yoga will help you get a toned body, this is the perfect choice</p>
-						</div>
-						<div class="bi-footer">
-							<div class="bi-cata">Health & Beauty</div>
-							<div class="bi-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-							</div>
+							<h2><a href="single-blog">Kamar Mandi</a></h2>
+							<p>Dengan fasilitas bak air serta handuk mandi</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/8.jpg" alt="">
+						<img src="/frontend/ahana/img/blog/19.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">Rapid Weight Loss</a></h2>
-							<p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain</p>
-						</div>
-						<div class="bi-footer">
-							<div class="bi-cata">Health & Beauty</div>
-							<div class="bi-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-							</div>
+							<h2><a href="single-blog">Tempat Jemur</a></h2>
+							<p>Dengan fasilitas capit untuk menjemur baju dan lainnya</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/9.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Healthy Eating Mode</a></h2>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis prae-sentium voluptatum deleniti</p>
-						</div>
-						<div class="bi-footer">
-							<div class="bi-cata">Health & Beauty</div>
-							<div class="bi-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="site-pagination pt-3">
-				<a href="#" class="active">1</a>
-				<a href="#">2</a>
-				<a href="#"><i class="material-icons">keyboard_arrow_right</i></a>
 			</div>
 		</div>
 	</section>
 	<!-- Events Section end -->
-
-	<!-- Gallery Section -->
-	<div class="gallery-section">
-		<div class="gallery-slider owl-carousel">
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/1.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/2.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/3.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/4.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/5.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/6.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Gallery Section end -->
-
 
 	<!-- Footer Section -->
 	<footer class="footer-section">

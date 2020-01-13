@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Ahana | Yoga HTML Template</title>
+	<title>Pesantren Daarul Qolam</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Ahana Yoga HTML Template">
 	<meta name="keywords" content="yoga, html">
@@ -75,7 +75,7 @@
 			</div>
 			<div class="container">
 				<ul class="main-menu">
-					<li><a href="index">Home</a></li>
+					<li><a href="index">Beranda</a></li>
 					<li><a href="about">About</a></li>
 					<li><a href="classes">Classes</a>
 						<ul class="sub-menu">
@@ -86,12 +86,12 @@
 					<li><a href="trainer">trainers</a>
 						<ul class="sub-menu">
 							<li><a href="trainer">Our Trainers</a></li>
-							<li><a href="trainer-details">Trainers Details</a></li>
+							<li><a href="trainer-details">Visi Misi & Tujuan Pendidikan</a></li>
 						</ul>
 					</li>
-					<li><a href="events" class="active">events</a>
+					<li><a href="events" class="active">Pendaftaran</a>
 						<ul class="sub-menu">
-							<li><a href="events">Our Events</a></li>
+							<li><a href="events">Pendaftaran</a></li>
 							<li><a href="event-details">Events Details</a></li>
 						</ul>
 					</li>
@@ -195,9 +195,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-					<h2>All Events</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
+					<h2>Pendaftaran Siswa Baru</h2>
+                    <p>TK Al-Qur'an Terpadu, SD Islam Terpadu, SMP Islam Terpadu</p>
+                </div>
 			</div>
 		</div>
 	</section>
@@ -207,13 +207,13 @@
 		<div class="event-filter-warp">
 			<div class="row">
 				<div class="col-xl-3">
-					<p>Showing 8 classes of 30 classes</p>
+					<p>PPDB Pesantren Daarul Qolam</p>
 				</div>
 				<div class="col-xl-9">
 					<form class="event-filter-form">
 						<div class="ef-item">
-							<input type="text" placeholder="Event Date" class="event-date">
-							<i class="material-icons">event_available</i>
+							<input type="text" placeholder="Text">
+							<i class="material-icons"></i>
 						</div>
 						<div class="ef-item">
 							<input type="text" placeholder="Search">

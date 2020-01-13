@@ -76,32 +76,33 @@
 			</div>
 			<div class="container">
 				<ul class="main-menu">
-					<li><a href="index" class="active">Home</a></li>
-					<li><a href="about">About</a></li>
-					<li><a href="classes">Classes</a>
+                    <li><a href="index" class="active">Home</a></li>
+                    <li><a href="trainer">Tentang Kami</a>
+						<ul class="sub-menu">
+							<li><a href="trainer">Materi Pendidikan</a></li>
+							<li><a href="trainer-details">Visi Misi & Tujuan Pendidikan</a></li>
+						</ul>
+                    </li>
+                    <li><a href="blog">Fasilitas</a></li>
+					<li><a href="about">Ekstrakurikuler</a></li>
+					{{-- <li><a href="classes">Classes</a>
 						<ul class="sub-menu">
 							<li><a href="classes">Our Claasses</a></li>
 							<li><a href="classes-details">Claasses Details</a></li>
 						</ul>
-					</li>
-					<li><a href="trainer">trainers</a>
-						<ul class="sub-menu">
-							<li><a href="trainer">Our Trainers</a></li>
-							<li><a href="trainer-details">Trainers Details</a></li>
-						</ul>
-					</li>
+					</li> --}}
 					<li><a href="events">events</a>
 						<ul class="sub-menu">
 							<li><a href="events">Our Events</a></li>
 							<li><a href="event-details">Events Details</a></li>
 						</ul>
-					</li>
-					<li><a href="blog">Blog</a>
+                    </li>
+					{{-- <li><a href="blog">Blog</a>
 						<ul class="sub-menu">
 							<li><a href="blog">Our Blog</a></li>
 							<li><a href="single-blog">Blog Details</a></li>
 						</ul>
-					</li>
+                    </li> --}}
 					<li><a href="contact">Contact</a></li>
 				</ul>
 			</div>
@@ -233,31 +234,23 @@
 				<div class="classes-item">
 					<div class="ci-text">
 						<h4><a href="classes-details.html">Visi</a></h4>
-						<div class="ci-metas">
-							<div class="ci-meta"><i class="material-icons">event_available</i>Mon, Wed, Fri</div>
-							<div class="ci-meta"><i class="material-icons">alarm_on</i>06:30pm - 07:45pm</div>
-						</div>
-                            <p>Daarul Qolam adalah Pesantren Modern yang merupakan sebuah lembaga Pendidikan yang berbentuk Islamic Boarding School, adalah mewujudkan dan membangun serta menciptakan anak didik untuk menjadi generasi Qur'ani yang seimbang dalam penguasaan IPTEK dan IMTAQ serta mewujudkan generasi yang bermoral dan berakhlakul karimah seta mampu menumbuhkan kreativitas diri dalam rangka menata hidup dan kehidupannya untuk masa depan yang akan menjadi panutan dalam kehidupan di lingkungan keluarga, masyarakat, berbangsa dan bernegara.</p>
+                            <p>Daarul Qolam adalah Pesantren Modern yang merupakan sebuah lembaga Pendidikan yang berbentuk Islamic Boarding School, adalah mewujudkan dan membangun serta menciptakan anak didik untuk menjadi generasi Qur'ani ........</p>
                         </div>
 					<div class="ci-bottom">
 						<div class="ci-author">
 							<img src="/frontend/ahana/img/classes/author/1.jpg" alt="">
 							<div class="author-text">
-								<h6>Victoria Webb</h6>
+								<h6>Visi</h6>
 								<p>Yoga Trainer</p>
 							</div>
                         </div>
-                         <a href="" class="site-btn sb-gradient">baca ..</a>
+                         <a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
 					</div>
 				</div>
 				<div class="classes-item">
 					<div class="ci-text">
 						<h4>Misi</h4>
-						<div class="ci-metas">
-							<div class="ci-meta"><i class="material-icons">event_available</i>Mon, Wed, Fri</div>
-							<div class="ci-meta"><i class="material-icons">alarm_on</i>06:30pm - 07:45pm</div>
-						</div>
-                        <p>Guna mengimplementasikan visi yang telah ditetapkan, maka misi PESANTREN MODERN DAARUL QOLAM adalah: menciptakan, mewujudkan serta meningkatkan penghayatan dan pendalaman etika keagamaan dan ilmu pengetahuan melalui Peningkatan Kualitas Pendidikan Umum dan Agama, Peningkatan Kualitas Ibadah Keagamaan, Peningkatan Wawasan dan Kecerdasan Emosional, Peningkatan daya nalar keagamaan serta berperilaku positif yang menjadi contoh tauladan bagi sekelilingnya, Memperkokoh ukhuwah Islamiyah antar siswa, antar orangtua siswa, antar masyarakat dan keluarga besar Pondok Pesantren Daarul Qolam, Peningkatan pengabdian diri di bidang karya positif serta di dukung dengan rasa penuh keikhlasan.</p>
+						<p>Guna mengimplementasikan visi yang telah ditetapkan, maka misi PESANTREN MODERN DAARUL QOLAM adalah: menciptakan, mewujudkan serta meningkatkan penghayatan dan pendalaman etika keagamaan dan ilmu pengetahuan melalui .......</p>
                     </div>
 					<div class="ci-bottom">
 						<div class="ci-author">
@@ -267,17 +260,13 @@
 								<p>Yoga Trainer</p>
 							</div>
 						</div>
-						<a href="" class="site-btn sb-gradient">baca ..</a>
+						<a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
 					</div>
 				</div>
 				<div class="classes-item">
 					<div class="ci-text">
 						<h4>Tujuan Pendidikan</h4>
-						<div class="ci-metas">
-							<div class="ci-meta"><i class="material-icons">event_available</i>Mon, Wed, Fri</div>
-							<div class="ci-meta"><i class="material-icons">alarm_on</i>06:30pm - 07:45pm</div>
-						</div>
-                        <p>Memberikan bekal kemampuan dasar, pengetahuan dan keterampilan dasar yang bermanfaat bagi siswa, sesuai dengan mata pelajaran berdasarkan kurikulum Kementerian Pendidikan Nasional dan Kementerian Agama juga kurikulum Pondok Pesantren, Memberikan bekal kemampuan dasar tentang agama Islam dan pengamalannya sesuai dengan tingkat perkembangannnya serta memperisiapkan siswa untuk dapat mengikuti dan melanjutkan pendidikan ke jenjang yang lebih tinggi, Membina siswa  untuk menjadi insan yang berakhlakul karimah dan beraqidah Islam yang kuat</p>
+						<p>Memberikan bekal kemampuan dasar, pengetahuan dan keterampilan dasar yang bermanfaat bagi siswa, sesuai dengan mata pelajaran berdasarkan kurikulum Kementerian Pendidikan Nasional dan Kementerian Agama juga kurikulum .......</p>
                     </div>
 					<div class="ci-bottom">
 						<div class="ci-author">
@@ -287,81 +276,13 @@
 								<p>Yoga Trainer</p>
 							</div>
 						</div>
-						<a href="" class="site-btn sb-gradient">baca ..</a>
+						<a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- Classes Section end -->
-
-	<!-- Trainer Section -->
-	<section class="trainer-section overflow-hidden spad">
-		<div class="container">
-			<div class="section-title text-center">
-				<img src="/frontend/ahana/img/icons/logo-icon.png" alt="">
-				<h2>Our Trainer Yoga</h2>
-				<p>Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!</p>
-			</div>
-			<div class="trainer-slider owl-carousel">
-				<div class="ts-item">
-					<div class="trainer-item">
-						<div class="ti-img">
-							<img src="/frontend/ahana/img/trainer/1.png" alt="">
-						</div>
-						<div class="ti-text">
-							<h4>Lori Kennedy</h4>
-							<h6>Yoga Trainer</h6>
-							<p>Yoga & Therapy Certificate of Uttarakhand University Sanskrit</p>
-							<div class="ti-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-								<a href="#"><i class="fa fa-linkedin"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ts-item">
-					<div class="trainer-item">
-						<div class="ti-img">
-							<img src="/frontend/ahana/img/trainer/2.png" alt="">
-						</div>
-						<div class="ti-text">
-							<h4>Lori Kennedy</h4>
-							<h6>Yoga Trainer</h6>
-							<p>Yoga & Therapy Certificate of Uttarakhand University Sanskrit</p>
-							<div class="ti-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-								<a href="#"><i class="fa fa-linkedin"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ts-item">
-					<div class="trainer-item">
-						<div class="ti-img">
-							<img src="/frontend/ahana/img/trainer/3.png" alt="">
-						</div>
-						<div class="ti-text">
-							<h4>Rebecca James</h4>
-							<h6>Yoga Trainer</h6>
-							<p>Yoga & Therapy Certificate of Uttarakhand University Sanskrit</p>
-							<div class="ti-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-								<a href="#"><i class="fa fa-linkedin"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Trainer Section end -->
 
 	<!-- Review Section -->
 	<section class="review-section spad set-bg" data-setbg="img/review-bg.jpg">
@@ -377,7 +298,7 @@
                                 <h3>Sambutan Kepala Sekolah</h3>
                                 <p></p>
                                 <p>Assalamualaikum Wr. Wb Alhamdulillahi robbil alamin kami panjatkan kehadirat Allah SWT, atas rahmat dan karunia-Nya lah akhirnya Website sekolah dengan alamat daarulqolam.sch.id dapat kami bangun. Kami mengucapkan selamat datang di Website kami Pesantren Daarul Qolam yang saya tujukan untuk seluruh unsur pimpinan, guru, karyawan dan siswa serta khalayak umum guna dapat mengakses seluruh informasi tentang segala profil, aktifitas/kegiatan serta fasilitas sekolah kami.</p>
-                                <h4>K.H. Tubagus. Mulhat </h4>
+                                <h4>K.H. Tubagus Mulhat </h4>
 							</div>
 						</div>
 					</div>
