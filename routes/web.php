@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Route::get('/index', function () {
     return view('index');
 });
@@ -25,6 +29,10 @@ Route::get('/classes', function () {
 
 Route::get('/classes-details', function () {
     return view('classes-details');
+});
+
+Route::get('/admin/index1', function () {
+    return view('/admin/index1');
 });
 
 Route::get('/trainer', function () {
@@ -54,3 +62,33 @@ Route::get('/single-blog', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+    Route::get('/', function () {
+        return view('admin.artikel.index');
+    });
+    Route::resource('/artikel', 'ArtikelController');
+    Route::resource('/kategori', 'KategoriController');
+    Route::resource('/tag', 'TagController');
+});
+// Route::group(['prefix' => '/'], function () {
+//     Route::get('/', 'FrontendController@index')->name('index');
+//     Route::get('/about', function () {
+//         return view('frontend.about');
+//     });
+//     Route::get('/contact', function () {
+//         return view('frontend.contact');
+//     });
+//     // Route::get('/blog', 'FrontendController@allblog')->name('all.blog');
+//     // Route::get('/blog/{artikel}', 'FrontendController@detailblog')->name('detail.blog');
+//     // Route::get('/blog/kategori/{cat}', 'FrontendController@blogcat')->name('cat.blog');
+//     // Route::get('/blog/tag/{tag}', 'FrontendController@blogtag')->name('tag.blog');
+// });

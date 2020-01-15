@@ -74,32 +74,33 @@
 			</div>
 			<div class="container">
 				<ul class="main-menu">
-					<li><a href="index" >Home</a></li>
-					<li><a href="about">About</a></li>
-					<li><a href="classes">Classes</a>
+                    <li><a href="index" class="active">Home</a></li>
+                    <li><a href="trainer">Tentang Kami</a>
+						<ul class="sub-menu">
+							<li><a href="trainer">Materi Pendidikan</a></li>
+							<li><a href="trainer-details">Visi Misi & Tujuan Pendidikan</a></li>
+						</ul>
+                    </li>
+                    <li><a href="blog">Fasilitas</a></li>
+					<li><a href="about">Ekstrakurikuler</a></li>
+					{{-- <li><a href="classes">Classes</a>
 						<ul class="sub-menu">
 							<li><a href="classes">Our Claasses</a></li>
 							<li><a href="classes-details">Claasses Details</a></li>
 						</ul>
-					</li>
-					<li><a href="trainer">trainers</a>
-						<ul class="sub-menu">
-							<li><a href="trainer">Our Trainers</a></li>
-							<li><a href="trainer-details">Trainers Details</a></li>
-						</ul>
-					</li>
+					</li> --}}
 					<li><a href="events">events</a>
 						<ul class="sub-menu">
 							<li><a href="events">Our Events</a></li>
 							<li><a href="event-details">Events Details</a></li>
 						</ul>
-					</li>
-					<li><a href="blog">Blog</a>
+                    </li>
+					{{-- <li><a href="blog">Blog</a>
 						<ul class="sub-menu">
 							<li><a href="blog">Our Blog</a></li>
 							<li><a href="single-blog">Blog Details</a></li>
 						</ul>
-					</li>
+                    </li> --}}
 					<li><a href="contact">Contact</a></li>
 				</ul>
 			</div>
