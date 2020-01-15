@@ -31,8 +31,8 @@ Route::get('/classes-details', function () {
     return view('classes-details');
 });
 
-Route::get('/admin/index1', function () {
-    return view('/admin/index1');
+Route::get('/admin/backend', function () {
+    return view('/admin/backend');
 });
 
 Route::get('/trainer', function () {

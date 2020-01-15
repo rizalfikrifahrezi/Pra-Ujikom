@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V15</title>
+	<title>Pesantren | Daarul Qolam</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -32,9 +32,9 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<div class="login100-form-title" style="background-image: url(/frontend/Login_v15/images/bg-01.jpg);">
+				<div class="login100-form-title" style="background-image: url(/frontend/Login_v15/images/bg-03.jpg);">
 					<span class="login100-form-title-1">
-						Sign In
+						Log In
 					</span>
 				</div>
 
@@ -50,21 +50,6 @@
 						<span class="label-input100">Password</span>
 						<input class="input100" type="password" name="password" placeholder="Enter password">
 						<span class="focus-input100"></span>
-					</div>
-
-					<div class="flex-sb-m w-full p-b-30">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Remember me
-							</label>
-						</div>
-
-						<div>
-							<a href="#" class="txt1">
-								Forgot Password?
-							</a>
-						</div>
 					</div>
 
 					<div class="container-login100-form-btn">
