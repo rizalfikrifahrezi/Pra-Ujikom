@@ -53,38 +53,40 @@
 		</div>
 		<div class="header-bottom">
 			<a href="index" class="site-logo">
-				<img src="/frontend/ahana/img/logo.png" alt="">
+                <img src="/frontend/ahana/img/logo3.png" width="145p" height="55p" alt="">
 			</a>
 			<div class="container">
 				<ul class="main-menu">
-                    <li><a href="index" class="active">Home</a></li>
+                    <li><a href="index">Home</a></li>
                     <li><a href="trainer">Tentang Kami</a>
 						<ul class="sub-menu">
 							<li><a href="trainer">Materi Pendidikan</a></li>
 							<li><a href="trainer-details">Visi Misi & Tujuan Pendidikan</a></li>
 						</ul>
                     </li>
-                    <li><a href="blog">Fasilitas</a></li>
+                    <li><a href="blog" class="active">Fasilitas</a></li>
 					<li><a href="about">Ekstrakurikuler</a></li>
 					{{-- <li><a href="classes">Classes</a>
 						<ul class="sub-menu">
 							<li><a href="classes">Our Claasses</a></li>
 							<li><a href="classes-details">Claasses Details</a></li>
 						</ul>
-					</li> --}}
-					<li><a href="events">events</a>
+                    </li> --}}
+                    <li><a href="events">Pendaftaran</a></li>
+					{{-- <li><a href="events">events</a>
 						<ul class="sub-menu">
 							<li><a href="events">Our Events</a></li>
 							<li><a href="event-details">Events Details</a></li>
 						</ul>
-                    </li>
+                    </li> --}}
 					{{-- <li><a href="blog">Blog</a>
 						<ul class="sub-menu">
 							<li><a href="blog">Our Blog</a></li>
 							<li><a href="single-blog">Blog Details</a></li>
 						</ul>
                     </li> --}}
-					<li><a href="contact">Contact</a></li>
+                    {{-- <li><a href="contact">Contact</a></li> --}}
+                    <button type="button" class="btn btn-default"><a href="login"><style></style>Login</a></button>
 				</ul>
 			</div>
 		</div>
@@ -284,51 +286,21 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget">
 						<div class="about-widget">
-							<img src="/frontend/ahana/img/logo-3.png" alt="">
-							<p>Lorem ipsum dolor sit amet, consec-tetur adipiscing elit sed.</p>
 							<ul>
-								<li><i class="material-icons">phone</i>(965) 436 3274</li>
-								<li><i class="material-icons">email</i>ahana.yoga@gmail.com</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
+                                <li><i class="material-icons">map</i>Jl. Cilisung No.74 , Sukamenak, Bandung</li>
+                                <li><i class="material-icons">phone</i>(022) 5415203</li>
+                            </ul>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
+                </div>
+                <div class="col-lg-3 col-sm-6">
 					<div class="footer-widget pl-0 pl-lg-5">
-						<h2 class="fw-title">Company</h2>
+						<h2 class="fw-title">Artikel Terbaru</h2>
 						<ul>
-							<li><a href="#">Online Education</a></li>
-							<li><a href="#">Gallery</a></li>
-							<li><a href="#">Special Issues</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Contact Us</a></li>
+							<li><a href="trainer">Materi Pendidikan</a></li>
+							<li><a href="blog">Fasilitas</a></li>
+							<li><a href="about">Ekstrakurikuler</a></li>
 						</ul>
-					</div>
-				</div>
-				<div class="col-lg-2 col-sm-6">
-					<div class="footer-widget">
-						<h2 class="fw-title">About Us</h2>
-						<ul>
-							<li><a href="#">Our Vision</a></li>
-							<li><a href="#">Our Mission</a></li>
-							<li><a href="#">Meet The Team</a></li>
-							<li><a href="#">Introduce</a></li>
-							<li><a href="#">Customer Service</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div class="footer-widget pl-0 pl-lg-5">
-						<h2 class="fw-title">Open time</h2>
-						<ul>
-							<li><i class="material-icons">alarm_on</i>Mon - Fri:  6:30am - 07:45pm</li>
-							<li><i class="material-icons">alarm_on</i>Sat - Sun:  8:30am - 05:45pm</li>
-						</ul>
-						<form class="infor-form">
-							<input type="text" placeholder="Your Email">
-							<button><img src="/frontend/ahana/img/icons/send.png" alt=""></button>
-						</form>
 					</div>
 				</div>
 			</div>

@@ -57,9 +57,9 @@
 			</a>
 			<div class="container">
 				<ul class="main-menu">
-                    <li><a href="index" class="active">Home</a></li>
+                    <li><a href="index">Home</a></li>
                     <li><a href="trainer">Tentang Kami</a>
-						<ul class="sub-menu">
+						<ul class="sub-menu" class="active">
 							<li><a href="trainer">Materi Pendidikan</a></li>
 							<li><a href="trainer-details">Visi Misi & Tujuan Pendidikan</a></li>
 						</ul>
@@ -71,20 +71,22 @@
 							<li><a href="classes">Our Claasses</a></li>
 							<li><a href="classes-details">Claasses Details</a></li>
 						</ul>
-					</li> --}}
-					<li><a href="events">events</a>
+                    </li> --}}
+                    <li><a href="events">Pendaftaran</a></li>
+					{{-- <li><a href="events">events</a>
 						<ul class="sub-menu">
 							<li><a href="events">Our Events</a></li>
 							<li><a href="event-details">Events Details</a></li>
 						</ul>
-                    </li>
+                    </li> --}}
 					{{-- <li><a href="blog">Blog</a>
 						<ul class="sub-menu">
 							<li><a href="blog">Our Blog</a></li>
 							<li><a href="single-blog">Blog Details</a></li>
 						</ul>
                     </li> --}}
-					<li><a href="contact">Contact</a></li>
+                    {{-- <li><a href="contact">Contact</a></li> --}}
+                    <button type="button" class="btn btn-default"><a href="login"><style></style>Login</a></button>
 				</ul>
 			</div>
 		</div>
@@ -236,21 +238,21 @@
 					<div class="ts-item">
 						<div class="trainer-item">
 							<div class="ti-img">
-								<img src="/frontend/ahana/img/trainer/9.png" alt="">
+								<img src="/frontend/ahana/img/trainer/11.png" alt="">
 							</div>
 							<div class="ti-text">
-                                <h4>Ekstrakurikuler</h4>
+                                <h4>Bidang Matematika</h4>
                                 <p></p>
-                                <h6>1. Pramuka</h6>
-                                <h6>2. Kesenian</h6>
-                                <h6>3. Taekwondo</h6>
-                                <h6>4. Komputer</h6>
-                                <h6>5. PMR</h6>
-                                <h6>6. Volly</h6>
-                                <h6>7. Basket</h6>
-                                <h6>8. Futsal</h6>
-                                <h6>9. BTQ</h6>
-                                <h6>10. Seni Lukis</h6>
+                                <h6>1. Aritmatika</h6>
+                                <h6>2. Geometri</h6>
+                                <h6>3. Aljabar</h6>
+                                <h6>4. Kalkulus</h6>
+                                <h6>5. Trigometri</h6>
+                                <h6>6. Statistik</h6>
+                                <h6>7. Matematika Murni</h6>
+                                <h6>8. Teori Himpunan</h6>
+                                <h6>9. Logika</h6>
+                                <h6>10. Matematika Terapan</h6>
 							</div>
 						</div>
 					</div>
@@ -290,51 +292,21 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget">
 						<div class="about-widget">
-							<img src="/frontend/ahana/img/logo-3.png" alt="">
-							<p>Lorem ipsum dolor sit amet, consec-tetur adipiscing elit sed.</p>
 							<ul>
-								<li><i class="material-icons">phone</i>(965) 436 3274</li>
-								<li><i class="material-icons">email</i>ahana.yoga@gmail.com</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
+								<li><i class="material-icons">map</i>Jl. Cilisung No.74, Sukamenak, Bandung</li>
+                                <li><i class="material-icons">phone</i>(022) 5415203</li>
+                            </ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget pl-0 pl-lg-5">
-						<h2 class="fw-title">Company</h2>
+						<h2 class="fw-title">Artikel Terbaru</h2>
 						<ul>
-							<li><a href="#">Online Education</a></li>
-							<li><a href="#">Gallery</a></li>
-							<li><a href="#">Special Issues</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Contact Us</a></li>
+							<li><a href="trainer">Materi Pendidikan</a></li>
+							<li><a href="blog">Fasilitas</a></li>
+							<li><a href="about">Ekstrakurikuler</a></li>
 						</ul>
-					</div>
-				</div>
-				<div class="col-lg-2 col-sm-6">
-					<div class="footer-widget">
-						<h2 class="fw-title">About Us</h2>
-						<ul>
-							<li><a href="#">Our Vision</a></li>
-							<li><a href="#">Our Mission</a></li>
-							<li><a href="#">Meet The Team</a></li>
-							<li><a href="#">Introduce</a></li>
-							<li><a href="#">Customer Service</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div class="footer-widget pl-0 pl-lg-5">
-						<h2 class="fw-title">Open time</h2>
-						<ul>
-							<li><i class="material-icons">alarm_on</i>Mon - Fri:  6:30am - 07:45pm</li>
-							<li><i class="material-icons">alarm_on</i>Sat - Sun:  8:30am - 05:45pm</li>
-						</ul>
-						<form class="infor-form">
-							<input type="text" placeholder="Your Email">
-							<button><img src="/frontend/ahana/img/icons/send.png" alt=""></button>
-						</form>
 					</div>
 				</div>
 			</div>

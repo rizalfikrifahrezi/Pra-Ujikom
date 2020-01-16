@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Silahkan Login
                 </div>
 
                 <div class="links">

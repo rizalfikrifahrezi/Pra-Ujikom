@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>Daarul Qolam | Admin</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -149,6 +149,14 @@
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+      <li class="nav-item dropdown no-arrow">
+        <a class="nav-link dropdown-toggle" href="/admin/startbootstrap-sb-admin-gh-pages/#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user-circle fa-fw"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+          <a class="dropdown-item" href="/resources/views/index.blade.php" data-toggle="modal" data-target="#logoutModal">Logout</a>
+        </div>
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -159,7 +167,7 @@
     <a href="/backend/AdminLTE-master/index3.html" class="brand-link">
       <img src="/backend/AdminLTE-master/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">DQ Admin</span>
     </a>
 
     <!-- Sidebar -->
@@ -170,7 +178,7 @@
           <img src="/backend/AdminLTE-master/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="/backend/AdminLTE-master/#" class="d-block">Alexander Pierce</a>
+          <a href="/backend/AdminLTE-master/#" class="d-block">Rizal Fikri Fahrezi</a>
         </div>
       </div>
 

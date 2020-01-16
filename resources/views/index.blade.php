@@ -74,19 +74,15 @@
 							<li><a href="classes-details">Claasses Details</a></li>
 						</ul>
 					</li> --}}
-					<li><a href="events">events</a>
-						<ul class="sub-menu">
-							<li><a href="events">Our Events</a></li>
-							<li><a href="event-details">Events Details</a></li>
-						</ul>
-                    </li>
+                    <li><a href="events">Pendaftaran</a></li>
 					{{-- <li><a href="blog">Blog</a>
 						<ul class="sub-menu">
 							<li><a href="blog">Our Blog</a></li>
 							<li><a href="single-blog">Blog Details</a></li>
 						</ul>
                     </li> --}}
-					<li><a href="contact">Contact</a></li>
+                    {{-- <li><a href="contact">Contact</a></li> --}}
+					<button type="button" class="btn btn-default"><a href="login"><style></style>Login</a></button>
 				</ul>
 			</div>
 		</div>
@@ -111,7 +107,7 @@
 						<div class="hs-text">
                             <h2>Selamat datang di situs resmi Pesantren daarul qolam</h2>
                             <p>TK Al-Qur'an Terpadu, SD Islam Terpadu, SMP Islam Terpadu</p>
-                            <div class="site-btn sb-white">Daftar Sekarang</div>
+                            <div class="site-btn sb-white"><a href="events">Daftar Sekarang</a></div>
 						</div>
 					</div>
 					<div class="hs-img">
@@ -139,14 +135,12 @@
                         </div>
 					<div class="ci-bottom">
 						<div class="ci-author">
-							<img src="/frontend/ahana/img/classes/author/1.jpg" alt="">
 							<div class="author-text">
-								<h6>Visi</h6>
-								<p>Yoga Trainer</p>
 							</div>
                         </div>
-                         <a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
-					</div>
+                        <a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
+                        <p></p>
+                    </div>
 				</div>
 				<div class="classes-item">
 					<div class="ci-text">
@@ -155,14 +149,12 @@
                     </div>
 					<div class="ci-bottom">
 						<div class="ci-author">
-							<img src="/frontend/ahana/img/classes/author/2.jpg" alt="">
 							<div class="author-text">
-								<h6>Victoria Webb</h6>
-								<p>Yoga Trainer</p>
 							</div>
 						</div>
 						<a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
-					</div>
+                        <p></p>
+                    </div>
 				</div>
 				<div class="classes-item">
 					<div class="ci-text">
@@ -171,14 +163,12 @@
                     </div>
 					<div class="ci-bottom">
 						<div class="ci-author">
-							<img src="/frontend/ahana/img/classes/author/3.jpg" alt="">
 							<div class="author-text">
-								<h6>Victoria Webb</h6>
-								<p>Yoga Trainer</p>
 							</div>
 						</div>
 						<a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
-					</div>
+                        <p></p>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -193,13 +183,13 @@
 					<div class="review-slider owl-carousel">
 						<div class="review-item">
 							<div class="ri-img">
-								<img src="/frontend/ahana/img/classes/author/1.jpg" alt="">
+								<img src="/frontend/ahana/img/classes/author/6.jpg" alt="">
 							</div>
 							<div class="ri-text text-white">
                                 <h3>Sambutan Kepala Sekolah</h3>
                                 <p></p>
                                 <p>Assalamualaikum Wr. Wb Alhamdulillahi robbil alamin kami panjatkan kehadirat Allah SWT, atas rahmat dan karunia-Nya lah akhirnya Website sekolah dengan alamat daarulqolam.sch.id dapat kami bangun. Kami mengucapkan selamat datang di Website kami Pesantren Daarul Qolam yang saya tujukan untuk seluruh unsur pimpinan, guru, karyawan dan siswa serta khalayak umum guna dapat mengakses seluruh informasi tentang segala profil, aktifitas/kegiatan serta fasilitas sekolah kami.</p>
-                                <h4>K.H. Tubagus Mulhat </h4>
+                                <h4>Hj. Ditdit Solihah S.pd</h4>
 							</div>
 						</div>
 					</div>
@@ -238,31 +228,6 @@
 							<li><a href="blog">Fasilitas</a></li>
 							<li><a href="about">Ekstrakurikuler</a></li>
 						</ul>
-					</div>
-				</div>
-				<div class="col-lg-2 col-sm-6">
-					<div class="footer-widget">
-						<h2 class="fw-title">About Us</h2>
-						<ul>
-							<li><a href="#">Our Vision</a></li>
-							<li><a href="#">Our Mission</a></li>
-							<li><a href="#">Meet The Team</a></li>
-							<li><a href="#">Introduce</a></li>
-							<li><a href="#">Customer Service</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div class="footer-widget pl-0 pl-lg-5">
-						<h2 class="fw-title">Open time</h2>
-						<ul>
-							<li><i class="material-icons">alarm_on</i>Mon - Fri:  6:30am - 07:45pm</li>
-							<li><i class="material-icons">alarm_on</i>Sat - Sun:  8:30am - 05:45pm</li>
-						</ul>
-						<form class="infor-form">
-							<input type="text" placeholder="Your Email">
-							<button><img src="/frontend/ahana/img/icons/send.png" alt=""></button>
-						</form>
 					</div>
 				</div>
 			</div>
