@@ -20,10 +20,10 @@ class ArtikelController extends Controller
     {
         $artikel = Artikel::orderBy('created_at', 'desc')->paginate(5);
         $count = Artikel::all();
-        $cari = $request->cari;
-        if ($cari) {
-            $artikel = Artikel::where('judul', 'LIKE', "%$cari%")->paginate(5);
-        }
+        // $cari = $request->cari;
+        // if ($cari) {
+        //     $artikel = Artikel::where('judul', 'LIKE', "%$cari%")->paginate(5);
+        // }
         return view('admin.artikel.index', compact('artikel', 'count'));
     }
 

@@ -192,7 +192,7 @@
 	<section class="events-page-section spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6">
 					<div class="blog-item">
 						<img src="/frontend/ahana/img/blog/12.jpg" alt="">
 						<div class="bi-text">
@@ -215,7 +215,7 @@
 					<div class="blog-item">
 						<img src="/frontend/ahana/img/blog/13.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">Tempat Beribadah (Masjid)</a></h2>
+							<h2><a href="single-blog">Masjid</a></h2>
 							<p>Dengan fasilitas tempat wudhu, mukena dan alat solat</p>
 						</div>
 					</div>

@@ -35,6 +35,14 @@ Route::get('/admin/backend', function () {
     return view('/admin/backend');
 });
 
+Route::get('/admin/kategori', function () {
+    return view('/admin/kategori');
+});
+
+Route::get('/admin/tag', function () {
+    return view('/admin/tag');
+});
+
 Route::get('/trainer', function () {
     return view('trainer');
 });
@@ -79,16 +87,3 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('/kategori', 'KategoriController');
     Route::resource('/tag', 'TagController');
 });
-// Route::group(['prefix' => '/'], function () {
-//     Route::get('/', 'FrontendController@index')->name('index');
-//     Route::get('/about', function () {
-//         return view('frontend.about');
-//     });
-//     Route::get('/contact', function () {
-//         return view('frontend.contact');
-//     });
-//     // Route::get('/blog', 'FrontendController@allblog')->name('all.blog');
-//     // Route::get('/blog/{artikel}', 'FrontendController@detailblog')->name('detail.blog');
-//     // Route::get('/blog/kategori/{cat}', 'FrontendController@blogcat')->name('cat.blog');
-//     // Route::get('/blog/tag/{tag}', 'FrontendController@blogtag')->name('tag.blog');
-// });

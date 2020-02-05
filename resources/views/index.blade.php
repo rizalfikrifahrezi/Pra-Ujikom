@@ -74,7 +74,7 @@
 							<li><a href="classes-details">Claasses Details</a></li>
 						</ul>
 					</li> --}}
-                    <li><a href="events">Pendaftaran</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd6SrFQ0x_1Bjt5uLNjsSQ0oI-zZrHi1fLjjighIpQcNRpdnw/viewform?usp=sf_link">Pendaftaran</a></li>
 					{{-- <li><a href="blog">Blog</a>
 						<ul class="sub-menu">
 							<li><a href="blog">Our Blog</a></li>
@@ -82,14 +82,13 @@
 						</ul>
                     </li> --}}
                     {{-- <li><a href="contact">Contact</a></li> --}}
-					<button type="button" class="btn btn-default"><a href="login"><style></style>Login</a></button>
 				</ul>
 			</div>
 		</div>
 	</header>
 	<!-- Header Section end -->
 
-	<!-- Hero Section -->
+    <!-- Hero Section -->
 	<section class="hero-section">
 		<div class="hero-social-warp">
 			<div class="hero-social">
@@ -101,7 +100,77 @@
 		</div>
 		<div class="hero-slider owl-carousel">
 
+            <div class="hero-slider owl-carousel">
 			<div class="hs-item">
+				<div class="hs-style-1 text-center">
+					<img src="/frontend/ahana/img/hero-slider/1.png" alt="">
+				</div>
+            </div>
+
+			<div class="hs-item">
+				<div class="hs-style-2">
+					<div class="container-fluid h-100">
+						<div class="row h-100">
+							<div class="col-lg-6 h-100 d-none d-lg-flex align-items-xl-end align-items-lg-center">
+								<div class="hs-img">
+									<img src="/frontend/ahana/img/hero-slider/2.png" alt="">
+								</div>
+							</div>
+							<div class="col-lg-6 d-flex align-items-center">
+								<div class="hs-text-warp">
+									<div class="hs-text">
+										<h2>Get slim and toned with yoga</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos-trud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+										<div class="site-btn sb-white">Register now</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hs-item">
+				<div class="hs-style-3 text-center">
+					<div class="container">
+						<div class="hs-text">
+							<h2>Reduce your stress</h2>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+							<div class="site-btn sb-white">Register now</div>
+						</div>
+					</div>
+					<div class="hs-img">
+						<img src="/frontend/ahana/img/hero-slider/3.png" alt="">
+					</div>
+				</div>
+			</div>
+        </div>
+{{--
+        <div class="slider-item" style="background-image:url(/frontend/ahana/img/hero-slider/1.png);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+                    <div class="col-md-8 text-center ftco-animate">
+                        <h1 class="mb-4">Bismillah</h1>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+
+            {{-- <div class="home-slider owl-carousel">
+                <div class="slider-item" style="background-image: url(/frontend/ahana/img/hero-slider/1.png);">
+                    <div class="overlay"></div>
+                        <div class="container">
+                            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+                                <div class="col-md-12 ftco-animate text-center">
+                                <h1 class="mb-2">Selamat Datang</h1>
+                                <h2 class="subheading mb-4">Murah Meriah Mengenyangkan</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+
+            <div class="slider-item" style="background-image:url(/frontend/ahana/img/hero-slider/8.jpg);">
+                <div class="overlay"></div>
 				<div class="hs-style-3 text-center">
 					<div class="container">
 						<div class="hs-text">
@@ -110,12 +179,9 @@
                             <div class="site-btn sb-white"><a href="events">Daftar Sekarang</a></div>
 						</div>
 					</div>
-					<div class="hs-img">
-						<img src="/frontend/ahana/img/hero-slider/5.png" height="400p" alt="">
-					</div>
 				</div>
 			</div>
-		</div>
+        </div>
 	</section>
 	<!-- Hero Section end -->
 
