@@ -84,6 +84,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
         return view('admin.artikel.index');
     });
     Route::resource('/artikel', 'ArtikelController');
+    Route::resource('/materipendidikan', 'MateriPendidikanController');
+    Route::resource('/ekstrakurikuler', 'EkstrakurikulerController');
+    Route::resource('/fasilitas', 'FasilitasController');
     Route::resource('/kategori', 'KategoriController');
     Route::resource('/tag', 'TagController');
 });

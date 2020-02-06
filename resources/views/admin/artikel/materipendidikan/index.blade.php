@@ -123,18 +123,18 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/admin/artikel/materipendidikan" class="nav-link active">
+                <a href="/admin/materipendidikan" class="nav-link active">
                     <p>Materi Pendidikan</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/admin/kategori" class="nav-link">
-                    <p>Fasilitas</p>
+                  <a href="/admin/ekstrakurikuler" class="nav-link">
+                    <p>Ekstrakurikuler</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/admin/tag" class="nav-link">
-                    <p>Ekstrakurikuler</p>
+                  <a href="/admin/fasilitas" class="nav-link">
+                    <p>Fasilitas</p>
                   </a>
                 </li>
                 </ul>
@@ -235,67 +235,6 @@
                 </div>
             </div>
             <div class="container-fluid">
-          <!-- Small boxes (Stat box) -->
-          <div class="row">
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-info">
-                <div class="inner">
-                  <h3>150</h3>
-
-                  <p>New Orders</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
-                </div>
-                <a href="/backend/AdminLTE-master/#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-success">
-                <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                  <p>Bounce Rate</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="/backend/AdminLTE-master/#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-warning">
-                <div class="inner">
-                  <h3>44</h3>
-
-                  <p>User Registrations</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-person-add"></i>
-                </div>
-                <a href="/backend/AdminLTE-master/#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-danger">
-                <div class="inner">
-                  <h3>65</h3>
-
-                  <p>Unique Visitors</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-pie-graph"></i>
-                </div>
-                <a href="/backend/AdminLTE-master/#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
             <!-- ./col -->
           </div>
           <!-- /.row -->
