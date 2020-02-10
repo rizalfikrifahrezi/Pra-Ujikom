@@ -117,8 +117,8 @@
             <li class="nav-item has-treeview menu-open">
               <a href="/backend/AdminLTE-master/#" class="nav-link active">
                 <p>
-                  Artikel
-                  <i class="right fas fa-angle-left"></i>
+                  Home
+                  <i class="right fas fa-angle-right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
@@ -128,13 +128,18 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/admin/ekstrakurikuler" class="nav-link">
-                    <p>Ekstrakurikuler</p>
+                  <a href="/admin/fasilitas" class="nav-link">
+                    <p>Fasilitas</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/admin/fasilitas" class="nav-link active">
-                    <p>Fasilitas</p>
+                  <a href="/admin/galeri" class="nav-link">
+                    <p>Galeri</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/admin/ekstrakurikuler" class="nav-link">
+                    <p>Ekstrakurikuler</p>
                   </a>
                 </li>
                 </ul>
@@ -142,13 +147,13 @@
             <li class="nav-item has-treeview menu-open">
               <a href="/backend/AdminLTE-master/#" class="nav-link active">
                 <p>
-                  Kategori
-                  <i class="right fas fa-angle-left"></i>
+                  Forms
+                  <i class="right fas fa-angle-right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/admin/artikel" class="nav-link">
+                  <a href="/admin/pendaftaran" class="nav-link active">
                     <p>Pendaftaran</p>
                   </a>
                 </li>
@@ -168,7 +173,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Fasilitas</h1>
+              <h1 class="m-0 text-dark">Pendaftaran</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
             </div><!-- /.col -->
@@ -183,7 +188,7 @@
         <div class="row">
             <div class="col-12">
             <div class="card">
-                <h5 class="card-header">Data Fasilitas Daarul Qolam</h5><br>
+                <h5 class="card-header">Data Pendaftaran Daarul Qolam</h5><br>
             <center>
                 <p></p>
                 <a href="{{ route('artikel.create') }}"
@@ -194,9 +199,9 @@
                     <table id="bs4-table" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                     <tr>
-                        <th>Foto</th>
-                        <th>Nama Fasilitas</th>
-                        <th>Penjelasan</th>
+                        <th>No</th>
+                        <th>Bidang</th>
+                        <th>Pelajaran</th>
                         <th style="text-align: center;">Aksi</th>
                     </tr>
                     </thead>
@@ -235,7 +240,7 @@
                 </div>
             </div>
             <div class="container-fluid">
-          <!-- Small boxes (Stat box) -->
+            <!-- ./col -->
           </div>
           <!-- /.row -->
           <!-- Main row -->

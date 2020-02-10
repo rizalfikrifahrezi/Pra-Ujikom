@@ -6,5 +6,34 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-    //
+    protected $fillable = ['nama_tag','slug'];
+    public $timestamps = true;
+
+    public function artikel()
+    {
+        return $this->belongsTo('App\tag','artikel_tag','tag_id','artikel_id');
+    }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+        self::deleting(function ($kategori){
+            if ($kategori->artikel->count() > 0){
+                $html = 'kategori tidak dapat dihapus karena masih memiliki artikel :';
+                $html = '<ul>';
+                foreach ($kategori->artikel as $data){
+                    $html .= "<li>$data->judul</li>";
+                }
+                $html .= "</ul>";
+                Session::flash("flash_notification",[
+                    "level" => "danger",
+                    "message" => $html
+                ]);
+            }
+        });
+    }
 }

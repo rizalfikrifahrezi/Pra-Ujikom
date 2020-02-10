@@ -117,8 +117,8 @@
             <li class="nav-item has-treeview menu-open">
               <a href="/backend/AdminLTE-master/#" class="nav-link active">
                 <p>
-                  Artikel
-                  <i class="right fas fa-angle-left"></i>
+                  Home
+                  <i class="right fas fa-angle-right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
@@ -128,13 +128,18 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/admin/ekstrakurikuler" class="nav-link active">
-                    <p>Ekstrakurikuler</p>
+                  <a href="/admin/fasilitas" class="nav-link">
+                    <p>Fasilitas</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/admin/fasilitas" class="nav-link">
-                    <p>Fasilitas</p>
+                  <a href="/admin/galeri" class="nav-link">
+                    <p>Galeri</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/admin/ekstrakurikuler" class="nav-link active">
+                    <p>Ekstrakurikuler</p>
                   </a>
                 </li>
                 </ul>
@@ -142,13 +147,13 @@
             <li class="nav-item has-treeview menu-open">
               <a href="/backend/AdminLTE-master/#" class="nav-link active">
                 <p>
-                  Kategori
-                  <i class="right fas fa-angle-left"></i>
+                  Forms
+                  <i class="right fas fa-angle-right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/admin/artikel" class="nav-link">
+                  <a href="/admin/pendaftaran" class="nav-link">
                     <p>Pendaftaran</p>
                   </a>
                 </li>

@@ -15,12 +15,12 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/about', function () {
-    return view('about');
+Route::get('/ekstrakurikuler', function () {
+    return view('ekstrakurikuler');
 });
 
 Route::get('/classes', function () {
@@ -43,24 +43,24 @@ Route::get('/admin/tag', function () {
     return view('/admin/tag');
 });
 
-Route::get('/trainer', function () {
-    return view('trainer');
+Route::get('/materipendidikan', function () {
+    return view('materipendidikan');
 });
 
-Route::get('/trainer-details', function () {
-    return view('trainer-details');
+Route::get('/visimisi', function () {
+    return view('visimisi');
 });
 
-Route::get('/events', function () {
-    return view('events');
+Route::get('/pendaftaran', function () {
+    return view('pendaftaran');
 });
 
 Route::get('/event-details', function () {
     return view('event-details');
 });
 
-Route::get('/blog', function () {
-    return view('blog');
+Route::get('/fasilitas', function () {
+    return view('fasilitas');
 });
 
 Route::get('/single-blog', function () {
@@ -88,5 +88,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('/ekstrakurikuler', 'EkstrakurikulerController');
     Route::resource('/fasilitas', 'FasilitasController');
     Route::resource('/kategori', 'KategoriController');
+    Route::resource('/galeri', 'galeriController');
+    Route::resource('/pendaftaran', 'PendaftaranController');
     Route::resource('/tag', 'TagController');
 });

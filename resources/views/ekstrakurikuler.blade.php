@@ -7,14 +7,14 @@
 	<meta name="keywords" content="yoga, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="frontend/ahana/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="frontend/ahana/css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="frontend/ahana/css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="frontend/ahana/css/nice-select.css"/>
-	<link rel="stylesheet" href="frontend/ahana/css/slicknav.min.css"/>
+	<link rel="stylesheet" href="/frontend/ahana/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/frontend/ahana/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="/frontend/ahana/css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="/frontend/ahana/css/nice-select.css"/>
+	<link rel="stylesheet" href="/frontend/ahana/css/slicknav.min.css"/>
 
 	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="frontend/ahana/css/style.css"/>
+	<link rel="stylesheet" href="/frontend/ahana/css/style.css"/>
 
 
 	<!--[if lt IE 9]>
@@ -46,33 +46,41 @@
 				<div class="col-md-6 text-left text-md-right p-0">
 					<div class="header-info d-none d-md-inline-flex">
 						<i class="material-icons">alarm_on</i>
-						<p>Sen - Sab:  06:30am - 18:45pm</p>
+						<p>Sen - Sab: 06:30am - 18:45pm</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="header-bottom">
-			<a href="index.html" class="site-logo">
+			<a href="index" class="site-logo">
 				<img src="/frontend/ahana/img/logo3.png" width="145p" height="55p" alt="">
 			</a>
+			{{-- <div class="hb-right">
+				<div class="hb-switch" id="search-switch">
+					<img src="/frontend/ahana/img/icons/search.png" alt="">
+				</div>
+				<div class="hb-switch" id="infor-switch">
+					<img src="/frontend/ahana/img/icons/bars.png" alt="">
+				</div>
+			</div> --}}
 			<div class="container">
 				<ul class="main-menu">
-                    <li><a href="index">Home</a></li>
-                    <li><a href="trainer">Tentang Kami</a>
-						<ul class="sub-menu" class="active">
-							<li><a href="trainer">Materi Pendidikan</a></li>
-							<li><a href="trainer-details">Visi Misi & Tujuan Pendidikan</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a>Tentang Kami</a>
+						<ul class="sub-menu">
+							<li><a href="materipendidikan">Materi Pendidikan</a></li>
+							<li><a href="visimisi">Visi Misi & Tujuan Pendidikan</a></li>
 						</ul>
                     </li>
-                    <li><a href="blog">Fasilitas</a></li>
-					<li><a href="about">Ekstrakurikuler</a></li>
+                    <li><a href="fasilitas">Fasilitas</a></li>
+					<li><a href="ekstrakurikuler" class="active">Ekstrakurikuler</a></li>
 					{{-- <li><a href="classes">Classes</a>
 						<ul class="sub-menu">
 							<li><a href="classes">Our Claasses</a></li>
 							<li><a href="classes-details">Claasses Details</a></li>
 						</ul>
                     </li> --}}
-                    <li><a href="events">Pendaftaran</a></li>
+                    <li><a href="pendaftaran">Pendaftaran</a></li>
 					{{-- <li><a href="events">events</a>
 						<ul class="sub-menu">
 							<li><a href="events">Our Events</a></li>
@@ -180,7 +188,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-					<h2>Materi Pendidikan</h2>
+                    <h2>Daftar Ekstrakurikuler</h2>
                     <p>Pesantren Daarul Qolam</p>
                 </div>
 			</div>
@@ -188,102 +196,86 @@
 	</section>
 	<!-- Page top Section end -->
 
-	<!-- Trainers Section -->
-	<section class="trainers-page-section spad overflow-hidden">
+	<!-- Events Section -->
+	<section class="events-page-section spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
-					<div class="trainer-item">
-						<div class="ti-img">
-							<img src="/frontend/ahana/img/trainer/7.png" alt="">
-						</div>
-						<div class="ti-text">
-                            <h4>Bidang Studi</h4>
-                            <p></p>
-                            <h6>1. Matematika</h6>
-                            <h6>2. Bahasa Indonesia</h6>
-                            <h6>3. PPKN</h6>
-                            <h6>4. Ilmu Pengetahuan Sosial</h6>
-                            <h6>5. Ilmu Pengetahuan Alam</h6>
-                            <h6>6. Penjaskes</h6>
-                            <h6>7. Kesenian</h6>
-                            <h6>8. Bahasa Sunda</h6>
-                            <h6>9. Bahasa Inggris</h6>
-                            <h6>10. Seni dan Budaya</h6>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/28.jpg" style="height:220px" alt="">
+						<div class="bi-text">
+                            <h3 style="height:50px">Pramuka</h3>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6">
-					<div class="trainer-item">
-						<div class="ti-img">
-							<img src="/frontend/ahana/img/trainer/8.png" alt="">
-						</div>
-						<div class="ti-text">
-                            <h4>Bidang Agama</h4>
-                            <p></p>
-                            <h6>1. Al-Qur'an</h6>
-                            <h6>2. Hadits</h6>
-                            <h6>3. Fiqih</h6>
-                            <h6>4. Aqidah Akhlak</h6>
-                            <h6>5. Aqidah Syariah</h6>
-                            <h6>6. Bahasa Arab</h6>
-                            <h6>7. Sejarah Islam</h6>
-                            <h6>8. Muamalah</h6>
-                            <h6>9. Tauhid</h6>
-                            <h6>10. Tafsir</h6>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/26.jpg" style="height:220px" alt="">
+						<div class="bi-text">
+                            <h2 style="height:50px">Futsal</h2>
+                        </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/24.png" style="height:220px" alt="">
+						<div class="bi-text">
+                            <h2 style="height:50px">Taekwondo</h2>
+                        </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/29.jpg" style="height:220px" alt="">
+						<div class="bi-text">
+                            <h3 style="height:65px">PMR</h3>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6">
-					<div class="ts-item">
-						<div class="trainer-item">
-							<div class="ti-img">
-								<img src="/frontend/ahana/img/trainer/11.png" alt="">
-							</div>
-							<div class="ti-text">
-                                <h4>Bidang Matematika</h4>
-                                <p></p>
-                                <h6>1. Aritmatika</h6>
-                                <h6>2. Geometri</h6>
-                                <h6>3. Aljabar</h6>
-                                <h6>4. Kalkulus</h6>
-                                <h6>5. Trigometri</h6>
-                                <h6>6. Statistik</h6>
-                                <h6>7. Matematika Murni</h6>
-                                <h6>8. Teori Himpunan</h6>
-                                <h6>9. Logika</h6>
-                                <h6>10. Matematika Terapan</h6>
-							</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/30.jpg" style="height:220px" alt="">
+						<div class="bi-text">
+							<h2 style="height:50px">Volly</h2>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6">
-					<div class="ts-item">
-						<div class="trainer-item">
-							<div class="ti-img">
-								<img src="/frontend/ahana/img/trainer/10.png" alt="">
-							</div>
-							<div class="ti-text">
-                                <h4>Program Ma'had</h4>
-                                <p></p>
-                                <h6>1. Nahwu Sorof</h6>
-                                <h6>2. Bahasa Arab</h6>
-                                <h6>3. Bahasa Inggris</h6>
-                                <h6>4. Kitab Kuning</h6>
-                                <h6>5. Muhadhoroh</h6>
-                                <h6>6. Hafalan Do'a</h6>
-                                <h6>7. Murrottal</h6>
-                                <h6>8. Sholat Berjamaah</h6>
-                                <h6>9. Khot</h6>
-                                <h6>10. Hafalan Surat</h6>
-							</div>
-						</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/31.jpg" style="height:220px" alt="">
+						<div class="bi-text">
+                            <h2 style="height:50px">Basket</h2>
+                        </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/32.jpg" style="height:220px" alt="">
+						<div class="bi-text">
+                            <h2 style="height:50px">Bulu Tangkis</h2>
+                        </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/33.jpg" style="height:220px" alt="">
+						<div class="bi-text">
+                            <h2 style="height:50px">Pencak Silat</h2>
+                        </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/34.jpg" style="height:220px" alt="">
+						<div class="bi-text">
+                            <h2 style="height:50px">Drum Band</h2>
+                        </div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-    <!-- Trainers Section end -->
+	<!-- Events Section end -->
 
 	<!-- Footer Section -->
 	<footer class="footer-section">
@@ -294,7 +286,7 @@
 						<div class="about-widget">
 							<ul>
 								<li><i class="material-icons">map</i>Jl. Cilisung No.74, Sukamenak, Bandung</li>
-                                <li><i class="material-icons">phone</i>(022) 5415203</li>
+                            	<li><i class="material-icons">phone</i>(022) 5415203</li>
                             </ul>
 						</div>
 					</div>

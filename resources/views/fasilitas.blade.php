@@ -46,41 +46,33 @@
 				<div class="col-md-6 text-left text-md-right p-0">
 					<div class="header-info d-none d-md-inline-flex">
 						<i class="material-icons">alarm_on</i>
-						<p>Sen - Sab: 06:30am - 18:45pm</p>
+						<p>Sen - Sab:  06:30am - 18:45pm</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="header-bottom">
 			<a href="index" class="site-logo">
-				<img src="/frontend/ahana/img/logo3.png" width="145p" height="55p" alt="">
+                <img src="/frontend/ahana/img/logo3.png" width="145p" height="55p" alt="">
 			</a>
-			{{-- <div class="hb-right">
-				<div class="hb-switch" id="search-switch">
-					<img src="/frontend/ahana/img/icons/search.png" alt="">
-				</div>
-				<div class="hb-switch" id="infor-switch">
-					<img src="/frontend/ahana/img/icons/bars.png" alt="">
-				</div>
-			</div> --}}
 			<div class="container">
 				<ul class="main-menu">
-                    <li><a href="index">Home</a></li>
-                    <li><a href="trainer">Tentang Kami</a>
+                    <li><a href="/">Home</a></li>
+                    <li><a>Tentang Kami</a>
 						<ul class="sub-menu">
-							<li><a href="trainer">Materi Pendidikan</a></li>
-							<li><a href="trainer-details">Visi Misi & Tujuan Pendidikan</a></li>
+							<li><a href="materipendidikan">Materi Pendidikan</a></li>
+							<li><a href="visimisi">Visi Misi & Tujuan Pendidikan</a></li>
 						</ul>
                     </li>
-                    <li><a href="blog">Fasilitas</a></li>
-					<li><a href="about" class="active">Ekstrakurikuler</a></li>
+                    <li><a href="fasilitas" class="active">Fasilitas</a></li>
+					<li><a href="ekstrakurikuler">Ekstrakurikuler</a></li>
 					{{-- <li><a href="classes">Classes</a>
 						<ul class="sub-menu">
 							<li><a href="classes">Our Claasses</a></li>
 							<li><a href="classes-details">Claasses Details</a></li>
 						</ul>
                     </li> --}}
-                    <li><a href="events">Pendaftaran</a></li>
+                    <li><a href="pendaftaran">Pendaftaran</a></li>
 					{{-- <li><a href="events">events</a>
 						<ul class="sub-menu">
 							<li><a href="events">Our Events</a></li>
@@ -188,7 +180,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-                    <h2>Daftar Ekstrakurikuler</h2>
+                    <h2>Fasilitas</h2>
                     <p>Pesantren Daarul Qolam</p>
                 </div>
 			</div>
@@ -200,76 +192,86 @@
 	<section class="events-page-section spad">
 		<div class="container">
 			<div class="row">
+                <div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/12.jpg" alt="">
+						<div class="bi-text">
+							<h2><a href="single-blog">Halaman Depan Sekolah</a></h2>
+							<p>Dengan fasilitas lapang dan tempat upacara</p>
+						</div>
+
+					</div>
+				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/28.jpg" style="height:220px" alt="">
+						<img src="/frontend/ahana/img/blog/11.jpg" alt="">
 						<div class="bi-text">
-                            <h3 style="height:50px">Pramuka</h3>
+							<h2><a href="single-blog">Halaman Parkiran Masjid</a></h2>
+							<p>Dengan fasilitas aula, taman dan lapangan parkir</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/26.jpg" style="height:220px" alt="">
+						<img src="/frontend/ahana/img/blog/13.jpg" alt="">
 						<div class="bi-text">
-                            <h2 style="height:50px">Futsal</h2>
-                        </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/24.png" style="height:220px" alt="">
-						<div class="bi-text">
-                            <h2 style="height:50px">Taekwondo</h2>
-                        </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/29.jpg" style="height:220px" alt="">
-						<div class="bi-text">
-                            <h3 style="height:65px">PMR</h3>
+							<h2><a href="single-blog">Masjid</a></h2>
+							<p>Dengan fasilitas tempat wudhu, mukena dan alat solat</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/30.jpg" style="height:220px" alt="">
+						<img src="/frontend/ahana/img/blog/14.jpg" alt="">
 						<div class="bi-text">
-							<h2 style="height:50px">Volly</h2>
+							<h2><a href="single-blog">Asrama</a></h2>
+							<p>Dengan fasilitas tempat tidur, selimut dan bantal</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/31.jpg" style="height:220px" alt="">
+						<img src="/frontend/ahana/img/blog/15.jpg" alt="">
 						<div class="bi-text">
-                            <h2 style="height:50px">Basket</h2>
-                        </div>
+							<h2><a href="single-blog">Kantin</a></h2>
+							<p>Dengan fasilitas meja makan serta terdapat tempat cuci tangan</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/32.jpg" style="height:220px" alt="">
+						<img src="/frontend/ahana/img/blog/16.jpg" alt="">
 						<div class="bi-text">
-                            <h2 style="height:50px">Bulu Tangkis</h2>
-                        </div>
+							<h2><a href="single-blog">Ruang Komputer</a></h2>
+							<p>Dengan fasilitas komputer serta terdapat printer untuk santri</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/33.jpg" style="height:220px" alt="">
+						<img src="/frontend/ahana/img/blog/17.jpg" alt="">
 						<div class="bi-text">
-                            <h2 style="height:50px">Pencak Silat</h2>
-                        </div>
+							<h2><a href="single-blog">Ruang Kelas</a></h2>
+							<p>Dengan fasilitas meja, kursi serta papan tulis</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/34.jpg" style="height:220px" alt="">
+						<img src="/frontend/ahana/img/blog/18.jpg" alt="">
 						<div class="bi-text">
-                            <h2 style="height:50px">Drum Band</h2>
-                        </div>
+							<h2><a href="single-blog">Kamar Mandi</a></h2>
+							<p>Dengan fasilitas bak air serta handuk mandi</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/19.jpg" alt="">
+						<div class="bi-text">
+							<h2><a href="single-blog">Tempat Jemur</a></h2>
+							<p>Dengan fasilitas capit untuk menjemur baju dan lainnya</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -285,13 +287,13 @@
 					<div class="footer-widget">
 						<div class="about-widget">
 							<ul>
-								<li><i class="material-icons">map</i>Jl. Cilisung No.74, Sukamenak, Bandung</li>
-                            	<li><i class="material-icons">phone</i>(022) 5415203</li>
+                                <li><i class="material-icons">map</i>Jl. Cilisung No.74 , Sukamenak, Bandung</li>
+                                <li><i class="material-icons">phone</i>(022) 5415203</li>
                             </ul>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
+                </div>
+                <div class="col-lg-3 col-sm-6">
 					<div class="footer-widget pl-0 pl-lg-5">
 						<h2 class="fw-title">Artikel Terbaru</h2>
 						<ul>

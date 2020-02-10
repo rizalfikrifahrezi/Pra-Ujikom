@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Artikel;
+use App\Tag;
 use Illuminate\Http\Request;
 use App\Kategori;
 use Illuminate\Support\Facades\Auth;
@@ -24,7 +25,7 @@ class FasilitasController extends Controller
         // if ($cari) {
         //     $artikel = Artikel::where('judul', 'LIKE', "%$cari%")->paginate(5);
         // }
-        return view('admin.artikel.fasilitas.index', compact('artikel', 'count'));
+        return view('admin.fasilitas.index', compact('artikel', 'count'));
     }
 
     /**
@@ -36,7 +37,7 @@ class FasilitasController extends Controller
     {
         $tag = Tag::all();
         $cat = Kategori::all();
-        return view('admin.artikel.create', compact('tag', 'cat'));
+        return view('admin.fasilitas.create', compact('tag', 'cat'));
     }
 
     /**
@@ -64,8 +65,8 @@ class FasilitasController extends Controller
         $artikel->save();
         $artikel->tag()->attach($request->tag);
         //
-        toastr()->success('Data artikel berhasil dismpan!');
-        return redirect()->route('artikel.index');
+        toastr()->success('Data fasilitas berhasil dismpan!');
+        return redirect()->route('fasilitas.index');
     }
 
     /**

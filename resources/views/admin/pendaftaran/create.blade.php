@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('backend')
 
 @section('title')
     Post Create

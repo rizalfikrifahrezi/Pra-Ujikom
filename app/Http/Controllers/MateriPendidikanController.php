@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Artikel;
 use Illuminate\Http\Request;
 use App\Kategori;
+use App\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
@@ -24,7 +25,7 @@ class MateriPendidikanController extends Controller
         // if ($cari) {
         //     $artikel = Artikel::where('judul', 'LIKE', "%$cari%")->paginate(5);
         // }
-        return view('admin.artikel.materipendidikan.index', compact('artikel', 'count'));
+        return view('admin.materipendidikan.index', compact('artikel', 'count'));
     }
 
     /**
@@ -36,7 +37,7 @@ class MateriPendidikanController extends Controller
     {
         $tag = Tag::all();
         $cat = Kategori::all();
-        return view('admin.artikel.create', compact('tag', 'cat'));
+        return view('admin.materipendidikan.create', compact('tag', 'cat'));
     }
 
     /**

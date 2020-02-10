@@ -117,7 +117,7 @@
             <li class="nav-item has-treeview menu-open">
               <a href="/backend/AdminLTE-master/#" class="nav-link active">
                 <p>
-                  Artikel
+                  Forms
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
@@ -135,6 +135,11 @@
                 <li class="nav-item">
                   <a href="/admin/tag" class="nav-link">
                     <p>Ekstrakurikuler</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/admin/galeri" class="nav-link">
+                    <p>Galeri</p>
                   </a>
                 </li>
                 </ul>

@@ -105,7 +105,7 @@
             <img src="/backend/AdminLTE-master/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="/backend/AdminLTE-master/#" class="d-block">Admin</a>
+            <a href="/backend/AdminLTE-master/#" class="d-block">Halaman Admin</a>
           </div>
         </div>
 
@@ -116,29 +116,45 @@
                with font-awesome or any other icon font library -->
             <li class="nav-item has-treeview menu-open">
               <a href="/backend/AdminLTE-master/#" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                  Dashboard
+                  Home
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/admin/artikel" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Artikel</p>
+                  <a href="/admin/materipendidikan" class="nav-link">
+                    <p>Materi Pendidikan</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/backend/AdminLTE-master/./index2.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Kategori</p>
+                  <a href="/admin/fasilitas" class="nav-link">
+                    <p>Fasilitas</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/backend/AdminLTE-master/./index3.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tag</p>
+                  <a href="/admin/galeri" class="nav-link">
+                    <p>Galeri</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/admin/ekstrakurikuler" class="nav-link">
+                    <p>Ekstrakurikuler</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview menu-open">
+              <a href="/backend/AdminLTE-master/#" class="nav-link active">
+                <p>
+                  Forms
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/admin/pendaftaran" class="nav-link">
+                    <p>Pendaftaran</p>
                   </a>
                 </li>
               </ul>
@@ -157,7 +173,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Artikel</h1>
+              <h1 class="m-0 text-dark">Halaman Admin</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
             </div><!-- /.col -->

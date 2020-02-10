@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\Artikel;
 use Illuminate\Http\Request;
 use App\Kategori;
+use App\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 
-class EkstrakurikulerController extends Controller
+class PendaftaranController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +25,7 @@ class EkstrakurikulerController extends Controller
         // if ($cari) {
         //     $artikel = Artikel::where('judul', 'LIKE', "%$cari%")->paginate(5);
         // }
-        return view('admin.ekstrakurikuler.index', compact('artikel', 'count'));
+        return view('admin.pendaftaran.index', compact('artikel', 'count'));
     }
 
     /**
@@ -36,7 +37,7 @@ class EkstrakurikulerController extends Controller
     {
         $tag = Tag::all();
         $cat = Kategori::all();
-        return view('admin.artikel.create', compact('tag', 'cat'));
+        return view('admin.artikel.materipendidikan.create', compact('tag', 'cat'));
     }
 
     /**
