@@ -6,6 +6,7 @@ use App\Artikel;
 use Illuminate\Http\Request;
 use App\Kategori;
 use App\Tag;
+use App\materipendidikan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
@@ -48,25 +49,26 @@ class MateriPendidikanController extends Controller
      */
     public function store(Request $request)
     {
-        $artikel = new Artikel;
-        $artikel->judul = $request->judul;
-        $artikel->slug = str_slug($request->judul);
-        $artikel->konten = $request->konten;
-        $artikel->user_id = Auth::user()->id;
-        $artikel->kategori_id = $request->kategori;
+        $materipendidikan = new MateriPendidikan;
+        $materipendidikan->no = $request->no;
+        $materipendidikan->bidang = $request->bidang;
+        $materipendidikan->matapelajaran = $request->matapelajaran;
+
         # Foto
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
             $path = public_path().'/assets/img/artikel/';
             $filename = str_random(6).'_'.$file->getClientOriginalName();
             $upload = $file->move($path, $filename);
-            $artikel->foto = $filename;
+
+            $materipendidikan->foto = $filename;
         }
-        $artikel->save();
-        $artikel->tag()->attach($request->tag);
-        //
-        toastr()->success('Data artikel berhasil dismpan!');
-        return redirect()->route('artikel.index');
+        $materipendidikan->save();
+        Session::flash("flash_notification",[
+            "level" => "success",
+            "message" => "Berhasil menyimpan data materi pendidikan"
+        ]);
+        return redirect()->route('materipendidikan.index');
     }
 
     /**
@@ -89,11 +91,8 @@ class MateriPendidikanController extends Controller
      */
     public function edit($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        $cat = Kategori::all();
-        $tag = Tag::all();
-        $select = $artikel->tag->pluck('id')->toArray();
-        return view('admin.artikel.edit', compact('artikel', 'cat', 'tag', 'select'));
+        $materipendidikan = materipendidikan::findOrFail($id);
+        return view('backend.materipendidikan.edit', compact('materipendidikan'));
     }
 
     /**

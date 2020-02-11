@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('layouts.ekstrakurikuler')
 
 @section('title')
-    Post Create
+    Post Creat
 @endsection
 
 @section('header') Buat Post @endsection
@@ -19,7 +19,7 @@
         <form action="{{ route('artikel.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
             <div class="form-group row mb-4">
-                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
+                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Title</label>
                 <div class="col-sm-12 col-md-10">
                     <input name="judul" type="text" class="form-control{{ $errors->has('judul') ? ' is-invalid' : '' }}">
 

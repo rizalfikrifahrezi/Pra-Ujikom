@@ -67,6 +67,7 @@
 						</ul>
                     </li>
                     <li><a href="fasilitas">Fasilitas</a></li>
+                    <li><a href="galeri">Galeri</a></li>
 					<li><a href="ekstrakurikuler">Ekstrakurikuler</a></li>
 					{{-- <li><a href="classes">Classes</a>
 						<ul class="sub-menu">
@@ -75,7 +76,7 @@
 						</ul>
 					</li> --}}
                     <li><a href="pendaftaran">Pendaftaran</a></li>
-					{{-- <li><a href="blog">Blog</a>
+                    {{-- <li><a href="blog">Blog</a>
 						<ul class="sub-menu">
 							<li><a href="blog">Our Blog</a></li>
 							<li><a href="single-blog">Blog Details</a></li>
@@ -99,84 +100,12 @@
 			</div>
 		</div>
 		<div class="hero-slider owl-carousel">
-
-            <div class="hero-slider owl-carousel">
-			<div class="hs-item">
-				<div class="hs-style-1 text-center">
-					<img src="/frontend/ahana/img/hero-slider/1.png" alt="">
-				</div>
-            </div>
-
-			<div class="hs-item">
-				<div class="hs-style-2">
-					<div class="container-fluid h-100">
-						<div class="row h-100">
-							<div class="col-lg-6 h-100 d-none d-lg-flex align-items-xl-end align-items-lg-center">
-								<div class="hs-img">
-									<img src="/frontend/ahana/img/hero-slider/2.png" alt="">
-								</div>
-							</div>
-							<div class="col-lg-6 d-flex align-items-center">
-								<div class="hs-text-warp">
-									<div class="hs-text">
-										<h2>Get slim and toned with yoga</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos-trud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-										<div class="site-btn sb-white">Register now</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="hs-item">
-				<div class="hs-style-3 text-center">
-					<div class="container">
-						<div class="hs-text">
-							<h2>Reduce your stress</h2>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-							<div class="site-btn sb-white">Register now</div>
-						</div>
-					</div>
-					<div class="hs-img">
-						<img src="/frontend/ahana/img/hero-slider/3.png" alt="">
-					</div>
-				</div>
-			</div>
-        </div>
-{{--
-        <div class="slider-item" style="background-image:url(/frontend/ahana/img/hero-slider/1.png);">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-                    <div class="col-md-8 text-center ftco-animate">
-                        <h1 class="mb-4">Bismillah</h1>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-
-            {{-- <div class="home-slider owl-carousel">
-                <div class="slider-item" style="background-image: url(/frontend/ahana/img/hero-slider/1.png);">
-                    <div class="overlay"></div>
-                        <div class="container">
-                            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-                                <div class="col-md-12 ftco-animate text-center">
-                                <h1 class="mb-2">Selamat Datang</h1>
-                                <h2 class="subheading mb-4">Murah Meriah Mengenyangkan</h2>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-
-            <div class="slider-item" style="background-image:url(/frontend/ahana/img/hero-slider/8.jpg);">
-                <div class="overlay"></div>
 				<div class="hs-style-3 text-center">
 					<div class="container">
 						<div class="hs-text">
                             <h2>Selamat datang di situs resmi Pesantren daarul qolam</h2>
                             <p>TK Al-Qur'an Terpadu, SD Islam Terpadu, SMP Islam Terpadu</p>
-                            <div class="site-btn sb-white"><a href="events">Daftar Sekarang</a></div>
+                            <div class="site-btn sb-white"><a href="pendaftaran">Daftar Sekarang</a></div>
 						</div>
 					</div>
 				</div>
@@ -300,17 +229,11 @@
 			<div class="footer-bottom">
 				<div class="row">
 					<div class="col-md-4">
-						<div class="footer-social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-instagram"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-linkedin"></i></a>
-						</div>
 					</div>
 					<div class="col-md-8 text-md-right">
 						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a href="/" target="_blank">Daarul Qolam </a> Designed by <a href="/" target="_blank"> Rizal Fikri Fahrezi </a> Develoved by<a href="/" target="_blank"> Daarul Qolam</a></p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 					</div>
 				</div>
 			</div>

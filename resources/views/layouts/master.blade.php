@@ -123,7 +123,7 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                <a href="/admin/materipendidikan" class="nav-link active">
+                <a href="/admin/materipendidikan" class="nav-link">
                     <p>Materi Pendidikan</p>
                   </a>
                 </li>
@@ -173,7 +173,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Materi Pendidikan</h1>
+              <h1 class="m-0 text-dark">Dashboard</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
             </div><!-- /.col -->

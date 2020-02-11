@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Artikel;
 use Illuminate\Http\Request;
 use App\Kategori;
+use App\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;

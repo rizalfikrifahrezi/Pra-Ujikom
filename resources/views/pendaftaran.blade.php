@@ -181,271 +181,336 @@
 			</div>
 		</div>
 	</section>
-	<!-- Page top Section end -->
+    <!-- Page top Section end -->
 
 	<div class="container">
 		<div class="event-filter-warp">
-			<div class="row">
-				<div class="col-xl-3">
-					<p>PPDB Pesantren Daarul Qolam</p>
-				</div>
-				<div class="col-xl-9">
-					<form class="event-filter-form">
-						<div class="ef-item">
-							<input type="text" placeholder="Text">
-							<i class="material-icons"></i>
-						</div>
-						<div class="ef-item">
-							<input type="text" placeholder="Search">
-							<i class="material-icons">search</i>
-						</div>
-						<div class="ef-item">
-							<input type="text" placeholder="Location">
-							<i class="material-icons">map</i>
-						</div>
-						<button class="site-btn sb-gradient">Find Event</button>
-					</form>
-				</div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <form action="{{ route('materipendidikan.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                            <div class="Text Black">
+                                <center>
+                                <h4>Data Diri Calon Pendaftar</h4>
+                                </center>
+                                <p></p>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Pilih Angkatan</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Pilih Angkatan</option>
+                                            <option>Tk Al-Qur'an</option>
+                                            <option>Sd Islam Terpadu</option>
+                                            <option>Smp Islam Terpadu</option>
+                                        </select>
+                                    </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Nama Lengkap</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="namalengkap" type="text" class="form-control{{ $errors->has('namalengkap') ? ' is-invalid' : '' }}"  placeholder="Nama Lengkap" required=""data-validation-required-message="Nama Lengkap Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('namalengkap'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('namalengkap') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Jenis Kelamin</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                                    </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Tempat Lahir</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="tempatlahir" type="text" class="form-control{{ $errors->has('tempatlahir') ? ' is-invalid' : '' }}" placeholder="Tempat Lahir">
+
+                                @if ($errors->has('tempatlahir'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('tempatlahir') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Tanggal Lahir</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="tanggallahir" type="text" class="form-control{{ $errors->has('tanggallahir') ? ' is-invalid' : '' }}"  placeholder="Tanggal Lahir">
+
+                                @if ($errors->has('tanggallahir'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('tanggallahir') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">No Telpon</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="notelpon" type="text" class="form-control{{ $errors->has('notelpon') ? ' is-invalid' : '' }}" placeholder="No Telpon" required=""data-validation-required-message="No Telpon Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('notelpon'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('notelpon') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Email</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" placeholder="Email" required=""data-validation-required-message="Email Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="Text Black">
+                                <center>
+                                <h4>Alamat Calon Pendaftar</h4>
+                                </center>
+                                <p></p>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Provinsi</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Pilih Provinsi</option>
+                                            <option>DKI Jakarta</option>
+                                            <option>Jawa Barat</option>
+                                            <option>Jawa Tengah</option>
+                                            <option>Jawa Timur</option>
+                                            <option>Jawa Tengah</option>
+                                            <option>Aceh</option>
+                                            <option>Sumatera Barat</option>
+                                            <option>Sumatera Tengah</option>
+                                            <option>Sumatera Timur</option>
+                                            <option>Sumatera Utara</option>
+                                            <option>Sumatera Selatan</option>
+                                            <option>Jambi</option>
+                                            <option>Riau</option>
+                                            <option>Bengkulu</option>
+                                            <option>Lampung</option>
+                                            <option>Kepulauan Bangka Belitung</option>
+                                            <option>DI Yogyakarta</option>
+                                            <option>Banten</option>
+                                            <option>Bali</option>
+                                            <option>Nusa Tenggara Barat</option>
+                                            <option>Nusa Tenggara Timur</option>
+                                            <option>Kalimantan Barat</option>
+                                            <option>Kalimantan Tengah</option>
+                                            <option>Kalimantan Selatan</option>
+                                            <option>Kalimantan Timur</option>
+                                            <option>Kalimantan Utara</option>
+                                            <option>Sulawesi Tengah</option>
+                                            <option>Sulawesi Selatan</option>
+                                            <option>Sulawesi Tenggara</option>
+                                            <option>Gorontalo</option>
+                                            <option>Maluku</option>
+                                            <option>Maluku Utara</option>
+                                            <option>Papua</option>
+                                            <option>Papua Barat</option>
+                                        </select>
+                                    </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Kab / Kota</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="kabkota" type="text" class="form-control{{ $errors->has('kabkota') ? ' is-invalid' : '' }}" type="text" placeholder="Kab / Kota" required=""data-validation-required-message="Kab / Kota Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('kabkota'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('kabkota') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Kecamatan</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="kecamatan" type="text" class="form-control{{ $errors->has('kecamatan') ? ' is-invalid' : '' }}" type="text" placeholder="Kecamatan" required=""data-validation-required-message="Kecamatan Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('kecamatan'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('kecamatan') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Desa / Kelurahan</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="desakelurahan" type="text" class="form-control{{ $errors->has('desakelurahan') ? ' is-invalid' : '' }}" type="text" placeholder="Desa / Kelurahan" required=""data-validation-required-message="Desa / Kelurahan Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('desakelurahan'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('desakelurahan') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Alamat Lengkap</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="alamatlengkap" type="text" class="form-control{{ $errors->has('alamatlengkap') ? ' is-invalid' : '' }}" type="text" placeholder="Tidak perlu menulis provinsi, kota, kecamatan & kelurahan" required=""data-validation-required-message="Desa / Kelurahan Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('alamatlengkap'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('alamatlengkap') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Kode Pos</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="namaayah" type="text" class="form-control{{ $errors->has('kodepos') ? ' is-invalid' : '' }}" type="text" placeholder="Kode Pos">
+
+                                @if ($errors->has('kodepos'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('kodepos') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="Text Black">
+                                <center>
+                                <h4>Data Orang Tua</h4>
+                                </center>
+                                <p></p>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Nama Ayah</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="namaayah" type="text" class="form-control{{ $errors->has('namaayah') ? ' is-invalid' : '' }}" type="text" placeholder="Nama Ayah" required=""data-validation-required-message="Nama Ayah Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('namaayah'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('namaayah') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Nama Ibu</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="namaibu" type="text" class="form-control{{ $errors->has('namaibu') ? ' is-invalid' : '' }}" type="text" placeholder="Nama Ibu" required=""data-validation-required-message="Nama Ibu Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('namaibu'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('namaibu') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Pekerjaan Ayah</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="pekerjaanayah" type="text" class="form-control{{ $errors->has('pekerjaanayah') ? ' is-invalid' : '' }}" type="text" placeholder="Pekerjaan Ayah" required=""data-validation-required-message="Pekerjaan Ayah Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('pekerjaanayah'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('pekerjaanayah') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Pekerjaan Ayah</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="pekerjaanibu" type="text" class="form-control{{ $errors->has('pekerjaanibu') ? ' is-invalid' : '' }}" type="text" placeholder="Pekerjaan Ibu" required=""data-validation-required-message="Pekerjaan Ibu Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('pekerjaanibu'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('pekerjaanibu') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">No Telpon</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="nomortelpon" type="text" class="form-control{{ $errors->has('nomortelpon') ? ' is-invalid' : '' }}" type="text" placeholder="Nomor Telpon" required=""data-validation-required-message="Nomor Telpon Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('nomortelpon'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('nomortelpon') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Nomor Hp</label>
+                                <div class="col-sm-12 col-md-10">
+                                    <input name="Nomor Hp" type="text" class="form-control{{ $errors->has('Nomor Hp') ? ' is-invalid' : '' }}" type="text" placeholder="Nomor Hp" required=""data-validation-required-message="Nomor Hp Wajib Diisi" aria-invalid="false">
+
+                                @if ($errors->has('Nomor Hp'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('Nomor Hp') }}</strong>
+                                    </span>
+                                @endif
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 offset-md-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2"></label>
+                                <button id="kirim" class="btn btn-primary mr-1 mb-1 waves-effect waves-light" type="submit">Simpan & Daftar</button>
+                                <a class="btn btn-outline-warning mr-1 mb-1 waves-effect waves-light" href="/pendaftaran" onclick="location.reload()">Reset</a>
+                            </div>
+                        </div>
+                        </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
 			</div>
 		</div>
 	</div>
 
 
-	<!-- Events Section -->
-	<section class="events-page-section spad">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="event-item">
-						<div class="ei-img">
-							<img src="/frontend/ahana/img/event/1.jpg" alt="">
-						</div>
-						<div class="ei-text">
-							<h4><a href="event-details.html">Lole White Yoga Tour</a></h4>
-							<ul>
-								<li><i class="material-icons">person</i>Kelly Alexander</li>
-								<li><i class="material-icons">event_available</i>15 January, 2019</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="event-item">
-						<div class="ei-img">
-							<img src="/frontend/ahana/img/event/2.jpg" alt="">
-						</div>
-						<div class="ei-text">
-							<h4>Free Yoga Madrid</h4>
-							<ul>
-								<li><i class="material-icons">person</i>Kelly Alexander</li>
-								<li><i class="material-icons">event_available</i>15 January, 2019</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="event-item">
-						<div class="ei-img">
-							<img src="/frontend/ahana/img/event/3.jpg" alt="">
-						</div>
-						<div class="ei-text">
-							<h4>One Love Dallas</h4>
-							<ul>
-								<li><i class="material-icons">person</i>Kelly Alexander</li>
-								<li><i class="material-icons">event_available</i>15 January, 2019</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="event-item">
-						<div class="ei-img">
-							<img src="/frontend/ahana/img/event/4.jpg" alt="">
-						</div>
-						<div class="ei-text">
-							<h4>Get on Your Mat</h4>
-							<ul>
-								<li><i class="material-icons">person</i>Kelly Alexander</li>
-								<li><i class="material-icons">event_available</i>15 January, 2019</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="event-item">
-						<div class="ei-img">
-							<img src="/frontend/ahana/img/event/5.jpg" alt="">
-						</div>
-						<div class="ei-text">
-							<h4>Solstice in Times Square</h4>
-							<ul>
-								<li><i class="material-icons">person</i>Kelly Alexander</li>
-								<li><i class="material-icons">event_available</i>15 January, 2019</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="event-item">
-						<div class="ei-img">
-							<img src="/frontend/ahana/img/event/6.jpg" alt="">
-						</div>
-						<div class="ei-text">
-							<h4>Athleta Mind Over</h4>
-							<ul>
-								<li><i class="material-icons">person</i>Kelly Alexander</li>
-								<li><i class="material-icons">event_available</i>15 January, 2019</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="event-item">
-						<div class="ei-img">
-							<img src="/frontend/ahana/img/event/7.jpg" alt="">
-						</div>
-						<div class="ei-text">
-							<h4>Mega-Yoga Classes</h4>
-							<ul>
-								<li><i class="material-icons">person</i>Kelly Alexander</li>
-								<li><i class="material-icons">event_available</i>15 January, 2019</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="event-item">
-						<div class="ei-img">
-							<img src="/frontend/ahana/img/event/8.jpg" alt="">
-						</div>
-						<div class="ei-text">
-							<h4>Yoga Festivals</h4>
-							<ul>
-								<li><i class="material-icons">person</i>Kelly Alexander</li>
-								<li><i class="material-icons">event_available</i>15 January, 2019</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="site-pagination pt-3">
-				<a href="#" class="active">1</a>
-				<a href="#">2</a>
-				<a href="#"><i class="material-icons">keyboard_arrow_right</i></a>
-			</div>
-		</div>
-	</section>
-	<!-- Events Section end -->
-
-	<!-- Gallery Section -->
-	<div class="gallery-section">
-		<div class="gallery-slider owl-carousel">
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/1.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/2.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/3.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/4.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/5.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="/frontend/ahana/img/gallery/6.jpg" alt="">
-				<div class="gs-hover">
-					<i class="fa fa-instagram"></i>
-					<p>ahana.yoga</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Gallery Section end -->
-
-	<!-- Footer Section -->
+		<!-- Footer Section -->
 	<footer class="footer-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget">
 						<div class="about-widget">
-							<img src="/frontend/ahana/img/logo-3.png" alt="">
-							<p>Lorem ipsum dolor sit amet, consec-tetur adipiscing elit sed.</p>
-							<ul>
-								<li><i class="material-icons">phone</i>(965) 436 3274</li>
-								<li><i class="material-icons">email</i>ahana.yoga@gmail.com</li>
-								<li><i class="material-icons">map</i>184 Main Collins Street</li>
-							</ul>
+                            <div class="col-md-6 d-none d-md-block p-0">
+				</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget pl-0 pl-lg-5">
-						<h2 class="fw-title">Company</h2>
-						<ul>
-							<li><a href="#">Online Education</a></li>
-							<li><a href="#">Gallery</a></li>
-							<li><a href="#">Special Issues</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Contact Us</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-2 col-sm-6">
-					<div class="footer-widget">
-						<h2 class="fw-title">About Us</h2>
-						<ul>
-							<li><a href="#">Our Vision</a></li>
-							<li><a href="#">Our Mission</a></li>
-							<li><a href="#">Meet The Team</a></li>
-							<li><a href="#">Introduce</a></li>
-							<li><a href="#">Customer Service</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div class="footer-widget pl-0 pl-lg-5">
-						<h2 class="fw-title">Open time</h2>
-						<ul>
-							<li><i class="material-icons">alarm_on</i>Mon - Fri:  6:30am - 07:45pm</li>
-							<li><i class="material-icons">alarm_on</i>Sat - Sun:  8:30am - 05:45pm</li>
-						</ul>
-						<form class="infor-form">
-							<input type="text" placeholder="Your Email">
-							<button><img src="/frontend/ahana/img/icons/send.png" alt=""></button>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -468,7 +533,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</div>
 		</div>
 	</footer>
-	<!-- Footer Section end -->
+    <!-- Footer Section end -->
 
 	<div class="back-to-top"><img src="/frontend/ahana/img/icons/up-arrow.png" alt=""></div>
 
