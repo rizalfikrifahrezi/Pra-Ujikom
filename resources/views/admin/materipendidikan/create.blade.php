@@ -8,63 +8,44 @@
 @section('desc') Tulis post barumu! @endsection
 
 @section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Data Materi Pendidikan</div>
+                <div class="card-body">
+                    <form action="{{ route('materipendidikan.store') }}" method="post" enctype="multipart/form-data">
+                        {{ csrf_field() }}
 
-<div class="row">
-    <div class="col-12">
-      <div class="card">
-        <div class="card-body">
-        <form action="{{ route('materipendidikan.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
-            <div class="form-group row mb-4">
-                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">No</label>
-                <div class="col-sm-12 col-md-10">
-                    <input name="no" type="text" class="form-control{{ $errors->has('no') ? ' is-invalid' : '' }}">
-
-                @if ($errors->has('no'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('no') }}</strong>
-                    </span>
-                @endif
-                </div>
-            </div>
-            <div class="form-group row mb-4">
-                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Bidang</label>
-                <div class="col-sm-12 col-md-10">
-                    <input name="bidang" type="text" class="form-control{{ $errors->has('bidang') ? ' is-invalid' : '' }}">
-
-                @if ($errors->has('bidang'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('bidang') }}</strong>
-                    </span>
-                @endif
-                </div>
-            </div>
-            <div class="form-group row mb-4">
-                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Mata Pelajaran</label>
-                <div class="col-sm-12 col-md-10">
-                    <input name="matapelajaran" type="text" class="form-control{{ $errors->has('matapelajaran') ? ' is-invalid' : '' }}">
-
-                @if ($errors->has('matapelajaran'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('matapelajaran') }}</strong>
-                    </span>
-                @endif
-                </div>
-            </div>
-                    <div class="form-group row mb-4">
-            <label class="col-form-label text-md-left col-12 col-md-3 col-lg-3"></label>
-            <div class="col-sm-12 col-md-7">
-              <button type="submit" class="btn btn-primary">Buat Post</button>
-              <a href="{{ route('materipendidikan.index') }}" class="btn btn-secondary">Kembali</a>
-            </div>
-          </div>
-        </form>
-        </div>
-      </div>
+                        <div class="form-group">
+                            <label for="">Nama Bidang</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="namabidang">
+                                <option>Pilih Bidang</option>
+                                <option>Bidang Studi</option>
+                                <option>Bidang Agama</option>
+                                <option>Bidang Matematika</option>
+                                <option>Program Ma'had</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mata Pelajaran</label>
+                            <input class="form-control" type="text" name="matapelajaran">
+                        </div>
+                            <div class="form-group">
+                            <button type="submit" class="btn btn-outline-info">
+                            Simpan Data
+                            </button>
+                            </div>
+                            <div class="form-group">
+                            <a href="{{ url('admin/materipendidikan') }}" class="btn btn-outline-info">Kembali</a>
     </div>
-  </div>
-
-@endsection
+        </form>
+            </div>
+                </div>
+                    </div>
+                        </div>
+                            </div>
+                                @endsection
 
 @section('css')
     <!-- General CSS Files -->

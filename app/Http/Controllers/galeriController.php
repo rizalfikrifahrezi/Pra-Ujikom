@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Artikel;
 use Illuminate\Http\Request;
 use App\Kategori;
+use App\galeri;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Session;
+use Illuminate\Support\Str;
 
 class galeriController extends Controller
 {
@@ -18,13 +21,9 @@ class galeriController extends Controller
      */
     public function index()
     {
-        $artikel = Artikel::orderBy('created_at', 'desc')->paginate(5);
-        $count = Artikel::all();
-        // $cari = $request->cari;
-        // if ($cari) {
-        //     $artikel = Artikel::where('judul', 'LIKE', "%$cari%")->paginate(5);
-        // }
-        return view('admin.galeri.index', compact('galeri', 'count'));
+        $galeri = galeri::all();
+
+        return view('admin.galeri.index', compact('galeri'));
     }
 
     /**
@@ -34,7 +33,8 @@ class galeriController extends Controller
      */
     public function create()
     {
-        //
+        $galeri = galeri::all();
+        return view('admin.galeri.create', compact('galeri'));
     }
 
     /**
@@ -45,7 +45,23 @@ class galeriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $galeri = new galeri;
+        $galeri->foto = $request->foto;
+        if ($request->hasFile('foto')) {
+            $file = $request->file('foto');
+            $destinationPath = public_path() . '/assets/img/galeri/';
+            $filename = Str::random(6) . '_' . $file->getClientOriginalName();
+            $upload = $file->move($destinationPath, $filename);
+
+            $galeri->foto = $filename;
+        }
+
+        $galeri->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan data galeri bernama <b>$galeri->foto</b>!"
+        ]);
+        return redirect()->route('galeri.index');
     }
 
     /**

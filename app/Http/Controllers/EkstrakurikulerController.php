@@ -5,10 +5,13 @@ namespace App\Http\Controllers;
 use App\Artikel;
 use Illuminate\Http\Request;
 use App\Kategori;
+use App\ekstrakurikuler;
 use App\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Session;
+use Illuminate\Support\Str;
 
 class EkstrakurikulerController extends Controller
 {
@@ -19,13 +22,9 @@ class EkstrakurikulerController extends Controller
      */
     public function index()
     {
-        $artikel = Artikel::orderBy('created_at', 'desc')->paginate(5);
-        $count = Artikel::all();
-        // $cari = $request->cari;
-        // if ($cari) {
-        //     $artikel = Artikel::where('judul', 'LIKE', "%$cari%")->paginate(5);
-        // }
-        return view('admin.ekstrakurikuler.index', compact('artikel', 'count'));
+        $ekstrakurikuler = Ekstrakurikuler::all();
+
+        return view('admin.ekstrakurikuler.index', compact('ekstrakurikuler'));
     }
 
     /**
@@ -37,7 +36,7 @@ class EkstrakurikulerController extends Controller
     {
         $tag = Tag::all();
         $cat = Kategori::all();
-        return view('admin.artikel.create', compact('tag', 'cat'));
+        return view('admin.ekstrakurikuler.create', compact('tag', 'cat'));
     }
 
     /**
@@ -48,25 +47,24 @@ class EkstrakurikulerController extends Controller
      */
     public function store(Request $request)
     {
-        $artikel = new Artikel;
-        $artikel->judul = $request->judul;
-        $artikel->slug = str_slug($request->judul);
-        $artikel->konten = $request->konten;
-        $artikel->user_id = Auth::user()->id;
-        $artikel->kategori_id = $request->kategori;
-        # Foto
+        $ekstrakurikuler = new Ekstrakurikuler;
+        $ekstrakurikuler->foto = $request->foto;
+        $ekstrakurikuler->namaekskul = $request->namaekskul;
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
-            $path = public_path().'/assets/img/artikel/';
-            $filename = str_random(6).'_'.$file->getClientOriginalName();
-            $upload = $file->move($path, $filename);
-            $artikel->foto = $filename;
+            $destinationPath = public_path() . '/assets/img/ekstrakurikuler/';
+            $filename = Str::random(6) . '_' . $file->getClientOriginalName();
+            $upload = $file->move($destinationPath, $filename);
+
+            $ekstrakurikuler->foto = $filename;
         }
-        $artikel->save();
-        $artikel->tag()->attach($request->tag);
-        //
-        toastr()->success('Data artikel berhasil dismpan!');
-        return redirect()->route('artikel.index');
+
+        $ekstrakurikuler->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan data guru bernama <b>$ekstrakurikuler->foto</b>!"
+        ]);
+        return redirect()->route('ekstrakurikuler.index');
     }
 
     /**

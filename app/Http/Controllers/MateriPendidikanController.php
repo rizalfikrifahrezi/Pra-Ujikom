@@ -10,6 +10,8 @@ use App\materipendidikan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Session;
+use Illuminate\Support\Str;
 
 class MateriPendidikanController extends Controller
 {
@@ -20,13 +22,9 @@ class MateriPendidikanController extends Controller
      */
     public function index()
     {
-        $artikel = Artikel::orderBy('created_at', 'desc')->paginate(5);
-        $count = Artikel::all();
-        // $cari = $request->cari;
-        // if ($cari) {
-        //     $artikel = Artikel::where('judul', 'LIKE', "%$cari%")->paginate(5);
-        // }
-        return view('admin.materipendidikan.index', compact('artikel', 'count'));
+        $materipendidikan = MateriPendidikan::all();
+
+        return view('admin.materipendidikan.index', compact('materipendidikan'));
     }
 
     /**
@@ -36,9 +34,8 @@ class MateriPendidikanController extends Controller
      */
     public function create()
     {
-        $tag = Tag::all();
-        $cat = Kategori::all();
-        return view('admin.materipendidikan.create', compact('tag', 'cat'));
+        $materipendidikan = MateriPendidikan::all();
+        return view('admin.materipendidikan.create', compact('materipendidikan'));
     }
 
     /**
@@ -50,23 +47,14 @@ class MateriPendidikanController extends Controller
     public function store(Request $request)
     {
         $materipendidikan = new MateriPendidikan;
-        $materipendidikan->no = $request->no;
-        $materipendidikan->bidang = $request->bidang;
+        $materipendidikan->namabidang = $request->namabidang;
         $materipendidikan->matapelajaran = $request->matapelajaran;
 
-        # Foto
-        if ($request->hasFile('foto')) {
-            $file = $request->file('foto');
-            $path = public_path().'/assets/img/artikel/';
-            $filename = str_random(6).'_'.$file->getClientOriginalName();
-            $upload = $file->move($path, $filename);
 
-            $materipendidikan->foto = $filename;
-        }
         $materipendidikan->save();
-        Session::flash("flash_notification",[
+        Session::flash("flash_notification", [
             "level" => "success",
-            "message" => "Berhasil menyimpan data materi pendidikan"
+            "message" => "Berhasil menyimpan data materipendidikan bernama <b>$materipendidikan->foto</b>!"
         ]);
         return redirect()->route('materipendidikan.index');
     }
@@ -79,8 +67,7 @@ class MateriPendidikanController extends Controller
      */
     public function show($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        return view('admin.artikel.show', compact('artikel'));
+        //
     }
 
     /**
@@ -91,8 +78,8 @@ class MateriPendidikanController extends Controller
      */
     public function edit($id)
     {
-        $materipendidikan = materipendidikan::findOrFail($id);
-        return view('backend.materipendidikan.edit', compact('materipendidikan'));
+        $materipendidikan = MateriPendidikan::findOrFail($id);
+        return view('admin.materipendidikan.edit', compact('materipendidikan'));
     }
 
     /**
@@ -104,40 +91,16 @@ class MateriPendidikanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'judul' => 'required',
-            'konten' => 'required|min:50',
-            'foto' => 'mimes:jpeg.jpg.png.gif|max:2048',
-            'kategori' => 'required',
-            'tag' => 'required'
+        $materipendidikan = MateriPendidikan::findOrFail($id);
+        $materipendidikan->namabidang = $request->namabidang;
+        $materipendidikan->matapelajaran = $request->matapelajaran;
+
+        $materipendidikan->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan</b>!"
         ]);
-        $artikel = Artikel::findOrFail($id);
-        $artikel->judul = $request->judul;
-        $artikel->slug = str_slug($request->judul);
-        $artikel->konten = $request->konten;
-        $artikel->user_id = Auth::user()->id;
-        $artikel->kategori_id = $request->kategori;
-        # Foto
-        if ($request->hasFile('foto')) {
-            $file = $request->file('foto');
-            $path = public_path().'/assets/img/artikel/';
-            $filename = str_random(6).'_'.$file->getClientOriginalName();
-            $upload = $file->move($path, $filename);
-            if($artikel->foto){
-                $old_foto = $artikel->foto;
-                $filepath = public_path().'/assets/img/artikel/'.$artikel->foto;
-                try {
-                    File::delete($filepath);
-                } catch (FileNotFoundException $e) {
-                    //Exception $e;
-                }
-            }
-            $artikel->foto = $filename;
-        }
-        $artikel->save();
-        $artikel->tag()->sync($request->tag);
-        toastr()->success('Data artikel berhasil diubah!');
-        return redirect()->route('artikel.index');
+        return redirect()->route('materipendidikan.index');
     }
 
     /**
@@ -148,19 +111,11 @@ class MateriPendidikanController extends Controller
      */
     public function destroy($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        if($artikel->foto){
-            $old_foto = $artikel->foto;
-            $filepath = public_path().'/assets/img/artikel/'.$artikel->foto;
-            try {
-                File::delete($filepath);
-            } catch (FileNotFoundException $e) {
-                //Exception $e;
-            }
-        }
-        $artikel->tag()->detach($artikel->id);
-        $artikel->delete();
-        toastr()->error('Data artikel berhasil dihapus!');
-        return redirect()->route('artikel.index');
+        $materipendidikan = MateriPendidikan::findOrfail($id)->delete();
+        Session::flash("flash_notification",[
+            "level" => "Success",
+            "message" => "Berhasil menghapus<b>"
+        ]);
+        return redirect()->route('materipendidikan.index');
     }
 }

@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ekstrakurikuler extends Model
 {
-    //
+    protected $fillable = ['foto','namaekstrakurikuler','penjelasan'];
+    public $timestamps = true;
+
+    public function ekstrakurikuler()
+    {
+        return $this->belongsTo('App\Ekstrakurikuler');
+    }
 }

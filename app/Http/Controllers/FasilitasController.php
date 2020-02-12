@@ -6,9 +6,12 @@ use App\Artikel;
 use App\Tag;
 use Illuminate\Http\Request;
 use App\Kategori;
+use App\fasilitas;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Session;
+use Illuminate\Support\Str;
 
 class FasilitasController extends Controller
 {
@@ -19,13 +22,9 @@ class FasilitasController extends Controller
      */
     public function index()
     {
-        $artikel = Artikel::orderBy('created_at', 'desc')->paginate(5);
-        $count = Artikel::all();
-        // $cari = $request->cari;
-        // if ($cari) {
-        //     $artikel = Artikel::where('judul', 'LIKE', "%$cari%")->paginate(5);
-        // }
-        return view('admin.fasilitas.index', compact('artikel', 'count'));
+        $fasilitas = Fasilitas::all();
+
+        return view('admin.fasilitas.index', compact('fasilitas'));
     }
 
     /**
@@ -35,9 +34,8 @@ class FasilitasController extends Controller
      */
     public function create()
     {
-        $tag = Tag::all();
-        $cat = Kategori::all();
-        return view('admin.fasilitas.create', compact('tag', 'cat'));
+        $fasilitas = Fasilitas::all();
+        return view('admin.fasilitas.create', compact('fasilitas'));
     }
 
     /**
@@ -48,24 +46,24 @@ class FasilitasController extends Controller
      */
     public function store(Request $request)
     {
-        $artikel = new Artikel;
-        $artikel->judul = $request->judul;
-        $artikel->slug = str_slug($request->judul);
-        $artikel->konten = $request->konten;
-        $artikel->user_id = Auth::user()->id;
-        $artikel->kategori_id = $request->kategori;
-        # Foto
+        $fasilitas = new Fasilitas;
+        $fasilitas->foto = $request->foto;
+        $fasilitas->namafasilitas = $request->namafasilitas;
+        $fasilitas->penjelasan = $request->penjelasan;
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
-            $path = public_path().'/assets/img/artikel/';
-            $filename = str_random(6).'_'.$file->getClientOriginalName();
-            $upload = $file->move($path, $filename);
-            $artikel->foto = $filename;
+            $destinationPath = public_path() . '/assets/img/fasilitas/';
+            $filename = Str::random(6) . '_' . $file->getClientOriginalName();
+            $upload = $file->move($destinationPath, $filename);
+
+            $fasilitas->foto = $filename;
         }
-        $artikel->save();
-        $artikel->tag()->attach($request->tag);
-        //
-        toastr()->success('Data fasilitas berhasil dismpan!');
+
+        $fasilitas->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan data fasilitas bernama <b>$fasilitas->foto</b>!"
+        ]);
         return redirect()->route('fasilitas.index');
     }
 
@@ -77,8 +75,7 @@ class FasilitasController extends Controller
      */
     public function show($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        return view('admin.artikel.show', compact('artikel'));
+        //
     }
 
     /**
@@ -89,11 +86,8 @@ class FasilitasController extends Controller
      */
     public function edit($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        $cat = Kategori::all();
-        $tag = Tag::all();
-        $select = $artikel->tag->pluck('id')->toArray();
-        return view('admin.artikel.edit', compact('artikel', 'cat', 'tag', 'select'));
+        $fasilitas = Fasilitas::findOrFail($id);
+        return view('admin.fasilitas.edit', compact('fasilitas'));
     }
 
     /**
@@ -105,40 +99,35 @@ class FasilitasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'judul' => 'required',
-            'konten' => 'required|min:50',
-            'foto' => 'mimes:jpeg.jpg.png.gif|max:2048',
-            'kategori' => 'required',
-            'tag' => 'required'
-        ]);
-        $artikel = Artikel::findOrFail($id);
-        $artikel->judul = $request->judul;
-        $artikel->slug = str_slug($request->judul);
-        $artikel->konten = $request->konten;
-        $artikel->user_id = Auth::user()->id;
-        $artikel->kategori_id = $request->kategori;
-        # Foto
+        $fasilitas = Fasilitas::findOrFail($id);
+        $fasilitas->namafasilitas = $request->namafasilitas;
+        $fasilitas->penjelasan = $request->penjelasan;
+
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
-            $path = public_path().'/assets/img/artikel/';
-            $filename = str_random(6).'_'.$file->getClientOriginalName();
-            $upload = $file->move($path, $filename);
-            if($artikel->foto){
-                $old_foto = $artikel->foto;
-                $filepath = public_path().'/assets/img/artikel/'.$artikel->foto;
-                try {
-                    File::delete($filepath);
-                } catch (FileNotFoundException $e) {
-                    //Exception $e;
-                }
+            $destinationPath = public_path() . '/assets/img/fasilitas/';
+            $filename = Str::random(40) . '_' . $file->getClientOriginalName();
+            $uploadSuccess = $file->move($destinationPath, $filename);
+            $fasilitas->foto = $filename;
+
+        if ($fasilitas->fasilitas) {
+            $old_cover = $fasilitas->foto;
+            $filepath = public_path() . '/assets/img/fasilitas/' . $fasilitas->foto;
+            try {
+                File::delete($filepath);
+            } catch (FileNotFoundException $e) {
+                //Exception $e;
             }
-            $artikel->foto = $filename;
         }
-        $artikel->save();
-        $artikel->tag()->sync($request->tag);
-        toastr()->success('Data artikel berhasil diubah!');
-        return redirect()->route('artikel.index');
+        $fasilitas->foto = $filename;
+        }
+
+        $fasilitas->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan</b>!"
+        ]);
+        return redirect()->route('fasilitas.index');
     }
 
     /**
@@ -149,19 +138,11 @@ class FasilitasController extends Controller
      */
     public function destroy($id)
     {
-         $artikel = Artikel::findOrFail($id);
-        if($artikel->foto){
-            $old_foto = $artikel->foto;
-            $filepath = public_path().'/assets/img/artikel/'.$artikel->foto;
-            try {
-                File::delete($filepath);
-            } catch (FileNotFoundException $e) {
-                //Exception $e;
-            }
-        }
-        $artikel->tag()->detach($artikel->id);
-        $artikel->delete();
-        toastr()->error('Data artikel berhasil dihapus!');
-        return redirect()->route('artikel.index');
+        $fasilitas = Fasilitas::findOrfail($id)->delete();
+        Session::flash("flash_notification",[
+             "level" => "Success",
+             "message" => "Berhasil menghapus<b>"
+         ]);
+        return redirect()->route('fasilitas.index');
     }
 }

@@ -18,7 +18,6 @@ class CreateFasilitasTable extends Migration
             $table->string('foto');
             $table->string('namafasilitas');
             $table->string('penjelasan');
-
             $table->timestamps();
         });
     }

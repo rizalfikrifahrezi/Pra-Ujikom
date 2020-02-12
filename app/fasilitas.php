@@ -11,6 +11,6 @@ class fasilitas extends Model
 
     public function fasilitas()
     {
-        return $this->belongsTo('App/fasilitas');
+        return $this->belongsTo('App\Fasilitas');
     }
 }
