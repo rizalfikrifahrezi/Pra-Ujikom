@@ -57,37 +57,18 @@
 			</a>
 			<div class="container">
 				<ul class="main-menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a>Tentang Kami</a>
-						<ul class="sub-menu" class="active">
+                    <li><a href="/">Beranda</a></li>
+                    <li><a class="active">Profil</a>
+						<ul class="sub-menu">
 							<li><a href="materipendidikan">Materi Pendidikan</a></li>
 							<li><a href="visimisi">Visi Misi & Tujuan Pendidikan</a></li>
 						</ul>
                     </li>
                     <li><a href="fasilitas">Fasilitas</a></li>
-					<li><a href="ekstrakurikuler">Ekstrakurikuler</a></li>
-					{{-- <li><a href="classes">Classes</a>
-						<ul class="sub-menu">
-							<li><a href="classes">Our Claasses</a></li>
-							<li><a href="classes-details">Claasses Details</a></li>
-						</ul>
-                    </li> --}}
-                    <li><a href="pendaftaran">Pendaftaran</a></li>
-					{{-- <li><a href="events">events</a>
-						<ul class="sub-menu">
-							<li><a href="events">Our Events</a></li>
-							<li><a href="event-details">Events Details</a></li>
-						</ul>
-                    </li> --}}
-					{{-- <li><a href="blog">Blog</a>
-						<ul class="sub-menu">
-							<li><a href="blog">Our Blog</a></li>
-							<li><a href="single-blog">Blog Details</a></li>
-						</ul>
-                    </li> --}}
-                    {{-- <li><a href="contact">Contact</a></li> --}}
-                    <button type="button" class="btn btn-default"><a href="login"><style></style>Login</a></button>
-				</ul>
+                    <li><a href="ekstrakurikuler">Ekstrakurikuler</a></li>
+                    <li><a href="galeri">Galeri</a></li>
+					<li><a href="pendaftaran">Pendaftaran</a></li>
+                </ul>
 			</div>
 		</div>
 	</header>

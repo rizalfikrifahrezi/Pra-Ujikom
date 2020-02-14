@@ -64,104 +64,22 @@
 							<li><a href="visimisi">Visi Misi & Tujuan Pendidikan</a></li>
 						</ul>
                     </li>
-                    <li><a href="fasilitas" class="active">Fasilitas</a></li>
+                    <li><a href="fasilitas">Fasilitas</a></li>
                     <li><a href="ekstrakurikuler">Ekstrakurikuler</a></li>
-                    <li><a href="galeri">Galeri</a></li>
+                    <li><a href="galeri" class="active">Galeri</a></li>
 					<li><a href="pendaftaran">Pendaftaran</a></li>
-				</ul>
+                </ul>
 			</div>
 		</div>
 	</header>
-	<!-- Header Section end -->
-
-	<!-- Infor Model -->
-	<div class="infor-model-warp">
-		<div class="infor-model d-flex align-items-center">
-			<div class="infor-close">
-				<i class="material-icons">close</i>
-			</div>
-			<div class="infor-middle">
-				<a href="#" class="infor-logo">
-					<img src="/frontend/ahana/img/logo-2.png" alt="">
-				</a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-				<div class="insta-imgs">
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/1.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/2.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/3.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/4.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/5.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/6.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<form class="infor-form">
-					<input type="text" placeholder="Your Email">
-					<button><img src="/frontend/ahana/img/icons/send.png" alt=""></button>
-				</form>
-				<div class="insta-social">
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-instagram"></i></a>
-					<a href="#"><i class="fa fa-facebook"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Infor Model end -->
+    <!-- Header Section end -->
 
 	<!-- Page top Section -->
 	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-                    <h2>Fasilitas</h2>
+                    <h2>Galeri</h2>
                     <p>Pesantren Daarul Qolam</p>
                 </div>
 			</div>
@@ -173,14 +91,7 @@
 	<section class="events-page-section spad">
 		<div class="container">
 			<div class="row">
-                <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
-                <div class="crumina-module crumina-heading">
-                    <h3 class="heading-title">
-                        Beautiful Design and Comfortable Study Facilities
-                    </h3>
-                </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <ul class="main-menu">
                         <li class="nav-item has-treeview menu-open">
                         <ul class="nav nav-treeview">
@@ -191,30 +102,26 @@
                             </li>
                             <li class="nav-item">
                             <a href="/admin/fasilitas" class="nav-link">
-                                <p>Ruang Kelas</p>
+                                <p>Kegiatan Pesantren</p>
                             </a>
                             </li>
                             <li class="nav-item">
                             <a href="/admin/galeri" class="nav-link">
-                                <p>Ruang Lab</p>
+                                <p>Idul Adha</p>
                             </a>
                             </li>
                             <li class="nav-item">
                             <a href="/admin/ekstrakurikuler" class="nav-link">
-                                <p>Ekstrakurikuler</p>
+                                <p>Masjid</p>
                             </a>
                             </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-9">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/12.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Halaman Depan Sekolah</a></h2>
-							<p>Dengan fasilitas lapang dan tempat upacara</p>
-						</div>
+						<img src="/frontend/ahana/img/blog/51.jpg" alt="">
 
 					</div>
 				</div>
@@ -289,7 +196,8 @@
 							<p>Dengan fasilitas capit untuk menjemur baju dan lainnya</p>
 						</div>
 					</div>
-				</div>
+                </div>
+
 			</div>
 		</div>
 	</section>
@@ -367,3 +275,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 	</body>
 </html>
+

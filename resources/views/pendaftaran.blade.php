@@ -58,117 +58,22 @@
 			</a>
 			<div class="container">
 				<ul class="main-menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a>Tentang Kami</a>
+                    <li><a href="/">Beranda</a></li>
+                    <li><a>Profil</a>
 						<ul class="sub-menu">
 							<li><a href="materipendidikan">Materi Pendidikan</a></li>
 							<li><a href="visimisi">Visi Misi & Tujuan Pendidikan</a></li>
 						</ul>
                     </li>
                     <li><a href="fasilitas">Fasilitas</a></li>
-					<li><a href="ekstrakurikuler">Ekstrakurikuler</a></li>
-					{{-- <li><a href="classes">Classes</a>
-						<ul class="sub-menu">
-							<li><a href="classes">Our Claasses</a></li>
-							<li><a href="classes-details">Claasses Details</a></li>
-						</ul>
-                    </li> --}}
-                    <li><a href="pendaftaran" class="active">Pendaftaran</a></li>
-					{{-- <li><a href="blog">Blog</a>
-						<ul class="sub-menu">
-							<li><a href="blog">Our Blog</a></li>
-							<li><a href="single-blog">Blog Details</a></li>
-						</ul>
-                    </li> --}}
-                    {{-- <li><a href="contact">Contact</a></li> --}}
-                    <button type="button" class="btn btn-default"><a href="login"><style></style>Login</a></button>
-				</ul>
+                    <li><a href="ekstrakurikuler">Ekstrakurikuler</a></li>
+                    <li><a href="galeri">Galeri</a></li>
+					<li><a href="pendaftaran" class="active">Pendaftaran</a></li>
+                </ul>
 			</div>
 		</div>
 	</header>
 	<!-- Header Section end -->
-
-	<!-- Infor Model -->
-	<div class="infor-model-warp">
-		<div class="infor-model d-flex align-items-center">
-			<div class="infor-close">
-				<i class="material-icons">close</i>
-			</div>
-			<div class="infor-middle">
-				<a href="#" class="infor-logo">
-					<img src="/frontend/ahana/img/logo-2.png" alt="">
-				</a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-				<div class="insta-imgs">
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/1.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/2.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/3.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/4.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/5.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/6.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<form class="infor-form">
-					<input type="text" placeholder="Your Email">
-					<button><img src="/frontend/ahana/img/icons/send.png" alt=""></button>
-				</form>
-				<div class="insta-social">
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-instagram"></i></a>
-					<a href="#"><i class="fa fa-facebook"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Infor Model end -->
 
 	<!-- Page top Section -->
 	<section class="page-top-section page-sp set-bg" data-setbg="img/page-top-bg.jpg">
@@ -189,7 +94,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                        <form action="{{ route('materipendidikan.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('pendaftaran') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                             <div class="Text Black">
                                 <center>
@@ -200,7 +105,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Pilih Angkatan</label>
                                     <div class="col-sm-12 col-md-10">
-                                        <select class="form-control" id="exampleFormControlSelect1">
+                                        <select name="pilihangkatan" class="form-control" id="exampleFormControlSelect1">
                                             <option>Pilih Angkatan</option>
                                             <option>Tk Al-Qur'an</option>
                                             <option>Sd Islam Terpadu</option>
@@ -222,17 +127,6 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Jenis Kelamin</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                        <label class="form-check-label" for="inlineRadio2">Perempuan</label>
-                                    </div>
-                            </div>
 
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Tempat Lahir</label>
@@ -295,7 +189,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Provinsi</label>
                                     <div class="col-sm-12 col-md-10">
-                                        <select class="form-control" id="exampleFormControlSelect1">
+                                        <select name="provinsi" class="form-control" id="exampleFormControlSelect1">
                                             <option>Pilih Provinsi</option>
                                             <option>DKI Jakarta</option>
                                             <option>Jawa Barat</option>
@@ -390,7 +284,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Kode Pos</label>
                                 <div class="col-sm-12 col-md-10">
-                                    <input name="namaayah" type="text" class="form-control{{ $errors->has('kodepos') ? ' is-invalid' : '' }}" type="text" placeholder="Kode Pos">
+                                    <input name="kodepos" type="text" class="form-control{{ $errors->has('kodepos') ? ' is-invalid' : '' }}" type="text" placeholder="Kode Pos">
 
                                 @if ($errors->has('kodepos'))
                                     <span class="invalid-feedback" role="alert">
@@ -462,11 +356,11 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">No Telpon</label>
                                 <div class="col-sm-12 col-md-10">
-                                    <input name="nomortelpon" type="text" class="form-control{{ $errors->has('nomortelpon') ? ' is-invalid' : '' }}" type="text" placeholder="Nomor Telpon" required=""data-validation-required-message="Nomor Telpon Wajib Diisi" aria-invalid="false">
+                                    <input name="notelprumah" type="text" class="form-control{{ $errors->has('notelprumah') ? ' is-invalid' : '' }}" type="text" placeholder="Nomor Telpon" required=""data-validation-required-message="Nomor Telpon Wajib Diisi" aria-invalid="false">
 
-                                @if ($errors->has('nomortelpon'))
+                                @if ($errors->has('notelprumah'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('nomortelpon') }}</strong>
+                                        <strong>{{ $errors->first('notelprumah') }}</strong>
                                     </span>
                                 @endif
                                 </div>
@@ -475,11 +369,11 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Nomor Hp</label>
                                 <div class="col-sm-12 col-md-10">
-                                    <input name="Nomor Hp" type="text" class="form-control{{ $errors->has('Nomor Hp') ? ' is-invalid' : '' }}" type="text" placeholder="Nomor Hp" required=""data-validation-required-message="Nomor Hp Wajib Diisi" aria-invalid="false">
+                                    <input name="notelphp" type="text" class="form-control{{ $errors->has('notelphp') ? ' is-invalid' : '' }}" type="text" placeholder="Nomor Hp" required=""data-validation-required-message="Nomor Hp Wajib Diisi" aria-invalid="false">
 
-                                @if ($errors->has('Nomor Hp'))
+                                @if ($errors->has('notelphp'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('Nomor Hp') }}</strong>
+                                        <strong>{{ $errors->first('notelphp') }}</strong>
                                     </span>
                                 @endif
                                 </div>

@@ -51,8 +51,8 @@ Route::get('/visimisi', function () {
     return view('visimisi');
 });
 
-Route::get('/pendaftaran', function () {
-    return view('pendaftaran');
+Route::get('/galeri', function () {
+    return view('galeri');
 });
 
 Route::get('/event-details', function () {
@@ -91,4 +91,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('/galeri', 'galeriController');
     Route::resource('/pendaftaran', 'PendaftaranController');
     Route::resource('/tag', 'TagController');
+});
+
+Route::group(['prefix' => '/'], function () {
+    Route::get('/pendaftaran','PendaftaranFrontendController@awal');
+    Route::post('/pendaftaran','PendaftaranFrontendController@kirimdata')->name('pendaftaran');
 });

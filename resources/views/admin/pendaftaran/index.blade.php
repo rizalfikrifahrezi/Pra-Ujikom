@@ -191,7 +191,7 @@
                 <h5 class="card-header">Data Pendaftaran Daarul Qolam</h5><br>
             <center>
                 <p></p>
-                <a href="{{ route('artikel.create') }}"
+                <a href="{{ route('pendaftaran.create') }}"
                 class="la la-cloud-upload btn btn-info btn-rounded btn-floating btn-outline">&nbsp;Tambah Data
                 </a>
             </center>
@@ -200,31 +200,32 @@
                     <thead>
                     <tr>
                         <th>No</th>
-                        <th>Bidang</th>
-                        <th>Pelajaran</th>
+                        <th>Angkatan</th>
+                        <th>Nama Lengkap</th>
+                        <th>Tempat Lahir</th>
+                        <th>Tanggal Lahir</th>
                         <th style="text-align: center;">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
-                @foreach ($artikel as $data)
+                        @php
+                            $no=1;
+                        @endphp
+                @foreach ($pendaftaran as $data)
                     <tr>
-                        <td>{{$data->judul}}</td>
-                        <td>{{$data->slug}}</td>
-                        <td>
-                @foreach ($data->tag as $tag)
-                    {{ $tag->nama_tag }}
-                @endforeach</td>
-                    <td>{{$data->kategori->nama_kategori}}</td>
-                    <td>{{$data->user->name}}</td>
-                    <td><img src="{{asset('assets/img/artikel/' .$data->foto. '')}}"
-                        style="width:50px; height:50px;" alt="Foto"></td>
+                        <td>{{$no++}}</td>
+                        <td>{{$data->pilihangkatan}}</td>
+                        <td>{{$data->namalengkap}}</td>
+                        <td>{{$data->tempatlahir}}</td>
+                        <td>{{$data->tanggallahir}}</td>
+
                     <td style="text-align: center;">
-                <form action="{{route('artikel.destroy', $data->id)}}" method="post">
+                <form action="{{route('pendaftaran.destroy', $data->id)}}" method="post">
                     {{csrf_field()}}
-                <a href="{{route('artikel.edit', $data->id)}}"
+                <a href="{{route('pendaftaran.edit', $data->id)}}"
                     class="zmdi zmdi-edit btn btn-warning btn-rounded btn-floating btn-outline"> Edit
                 </a>
-                <a href="{{route('artikel.show', $data->id)}}"
+                <a href="{{route('pendaftaran.show', $data->id)}}"
                     class="zmdi zmdi-eye btn btn-success btn-rounded btn-floating btn-outline"> Show
                 </a>
                     <input type="hidden" name="_method" value="DELETE">

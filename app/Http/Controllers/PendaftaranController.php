@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Artikel;
+use App\pendaftaran;
 use Illuminate\Http\Request;
-use App\Kategori;
-use App\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
@@ -19,13 +17,13 @@ class PendaftaranController extends Controller
      */
     public function index()
     {
-        $artikel = Artikel::orderBy('created_at', 'desc')->paginate(5);
-        $count = Artikel::all();
+        $pendaftaran = Pendaftaran::orderBy('created_at', 'desc')->paginate(5);
+        $count = Pendaftaran::all();
         // $cari = $request->cari;
         // if ($cari) {
-        //     $artikel = Artikel::where('judul', 'LIKE', "%$cari%")->paginate(5);
+        //     $pendaftaran = pendaftaran::where('judul', 'LIKE', "%$cari%")->paginate(5);
         // }
-        return view('admin.pendaftaran.index', compact('artikel', 'count'));
+        return view('admin.pendaftaran.index', compact('pendaftaran', 'count'));
     }
 
     /**
@@ -35,9 +33,7 @@ class PendaftaranController extends Controller
      */
     public function create()
     {
-        $tag = Tag::all();
-        $cat = Kategori::all();
-        return view('admin.artikel.materipendidikan.create', compact('tag', 'cat'));
+        return view('admin.pendaftaran.create');
     }
 
     /**
@@ -48,26 +44,33 @@ class PendaftaranController extends Controller
      */
     public function store(Request $request)
     {
-        $artikel = new Artikel;
-        $artikel->judul = $request->judul;
-        $artikel->slug = str_slug($request->judul);
-        $artikel->konten = $request->konten;
-        $artikel->user_id = Auth::user()->id;
-        $artikel->kategori_id = $request->kategori;
-        # Foto
-        if ($request->hasFile('foto')) {
-            $file = $request->file('foto');
-            $path = public_path().'/assets/img/artikel/';
-            $filename = str_random(6).'_'.$file->getClientOriginalName();
-            $upload = $file->move($path, $filename);
-            $artikel->foto = $filename;
-        }
-        $artikel->save();
-        $artikel->tag()->attach($request->tag);
+        $pendaftaran = new Pendaftaran;
+        $pendaftaran->pilihangkatan = $request->pilihangkatan;
+        $pendaftaran->namalengkap = $request->namalengkap;
+        $pendaftaran->jeniskelamin = $request->jeniskelamin;
+        $pendaftaran->tempatlahir = $request->tempatlahir;
+        $pendaftaran->tanggallahir = $request->tanggallahir;
+        $pendaftaran->nomortelpon = $request->notelpon;
+        $pendaftaran->email = $request->email;
+        $pendaftaran->provinsi = $request->provinsi;
+        $pendaftaran->kabkota = $request->kabkota;
+        $pendaftaran->kecamatan = $request->kecamatan;
+        $pendaftaran->desakelurahan = $request->desakelurahan;
+        $pendaftaran->alamat = $request->alamatlengkap;
+        $pendaftaran->kodepos = $request->kodepos;
+        $pendaftaran->namalengkapayah = $request->namaayah;
+        $pendaftaran->namalengkapibu = $request->namaibu;
+        $pendaftaran->pekerjaanayah = $request->pekerjaanayah;
+        $pendaftaran->pekerjaanibu = $request->pekerjaanibu;
+        $pendaftaran->notelprumah = $request->notelprumah;
+        $pendaftaran->notelphp = $request->notelphp;
+
+        $pendaftaran->save();
         //
-        toastr()->success('Data artikel berhasil dismpan!');
-        return redirect()->route('artikel.index');
+        toastr()->success('Data pendaftaran berhasil dismpan!');
+        return redirect()->route('admin.pendaftaran.index');
     }
+
 
     /**
      * Display the specified resource.
@@ -77,8 +80,8 @@ class PendaftaranController extends Controller
      */
     public function show($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        return view('admin.artikel.show', compact('artikel'));
+        $pendaftaran = pendaftaran::findOrFail($id);
+        return view('admin.pendaftaran.show', compact('pendaftaran'));
     }
 
     /**
@@ -89,11 +92,9 @@ class PendaftaranController extends Controller
      */
     public function edit($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        $cat = Kategori::all();
-        $tag = Tag::all();
-        $select = $artikel->tag->pluck('id')->toArray();
-        return view('admin.artikel.edit', compact('artikel', 'cat', 'tag', 'select'));
+        $pendaftaran = pendaftaran::findOrFail($id);
+        $select = $pendaftaran->tag->pluck('id')->toArray();
+        return view('admin.pendaftaran.edit', compact('pendaftaran', 'cat', 'tag', 'select'));
     }
 
     /**
@@ -112,33 +113,33 @@ class PendaftaranController extends Controller
             'kategori' => 'required',
             'tag' => 'required'
         ]);
-        $artikel = Artikel::findOrFail($id);
-        $artikel->judul = $request->judul;
-        $artikel->slug = str_slug($request->judul);
-        $artikel->konten = $request->konten;
-        $artikel->user_id = Auth::user()->id;
-        $artikel->kategori_id = $request->kategori;
+        $pendaftaran = pendaftaran::findOrFail($id);
+        $pendaftaran->judul = $request->judul;
+        $pendaftaran->slug = str_slug($request->judul);
+        $pendaftaran->konten = $request->konten;
+        $pendaftaran->user_id = Auth::user()->id;
+        $pendaftaran->kategori_id = $request->kategori;
         # Foto
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
-            $path = public_path().'/assets/img/artikel/';
+            $path = public_path().'/assets/img/pendaftaran/';
             $filename = str_random(6).'_'.$file->getClientOriginalName();
             $upload = $file->move($path, $filename);
-            if($artikel->foto){
-                $old_foto = $artikel->foto;
-                $filepath = public_path().'/assets/img/artikel/'.$artikel->foto;
+            if($pendaftaran->foto){
+                $old_foto = $pendaftaran->foto;
+                $filepath = public_path().'/assets/img/pendaftaran/'.$pendaftaran->foto;
                 try {
                     File::delete($filepath);
                 } catch (FileNotFoundException $e) {
                     //Exception $e;
                 }
             }
-            $artikel->foto = $filename;
+            $pendaftaran->foto = $filename;
         }
-        $artikel->save();
-        $artikel->tag()->sync($request->tag);
-        toastr()->success('Data artikel berhasil diubah!');
-        return redirect()->route('artikel.index');
+        $pendaftaran->save();
+        $pendaftaran->tag()->sync($request->tag);
+        toastr()->success('Data pendaftaran berhasil diubah!');
+        return redirect()->route('pendaftaran.index');
     }
 
     /**
@@ -149,19 +150,19 @@ class PendaftaranController extends Controller
      */
     public function destroy($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        if($artikel->foto){
-            $old_foto = $artikel->foto;
-            $filepath = public_path().'/assets/img/artikel/'.$artikel->foto;
+        $pendaftaran = pendaftaran::findOrFail($id);
+        if($pendaftaran->foto){
+            $old_foto = $pendaftaran->foto;
+            $filepath = public_path().'/assets/img/pendaftaran/'.$pendaftaran->foto;
             try {
                 File::delete($filepath);
             } catch (FileNotFoundException $e) {
                 //Exception $e;
             }
         }
-        $artikel->tag()->detach($artikel->id);
-        $artikel->delete();
-        toastr()->error('Data artikel berhasil dihapus!');
-        return redirect()->route('artikel.index');
+        $pendaftaran->tag()->detach($pendaftaran->id);
+        $pendaftaran->delete();
+        toastr()->error('Data pendaftaran berhasil dihapus!');
+        return redirect()->route('pendaftaran.index');
     }
 }

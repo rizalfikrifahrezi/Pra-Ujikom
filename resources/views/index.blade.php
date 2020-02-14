@@ -59,31 +59,18 @@
 			</a>
 			<div class="container">
 				<ul class="main-menu">
-                    <li><a href="/" class="active">Home</a></li>
-                    <li><a>Tentang Kami</a>
+                    <li><a href="/" class="active">Beranda</a></li>
+                    <li><a>Profil</a>
 						<ul class="sub-menu">
 							<li><a href="materipendidikan">Materi Pendidikan</a></li>
 							<li><a href="visimisi">Visi Misi & Tujuan Pendidikan</a></li>
 						</ul>
                     </li>
                     <li><a href="fasilitas">Fasilitas</a></li>
+                    <li><a href="ekstrakurikuler">Ekstrakurikuler</a></li>
                     <li><a href="galeri">Galeri</a></li>
-					<li><a href="ekstrakurikuler">Ekstrakurikuler</a></li>
-					{{-- <li><a href="classes">Classes</a>
-						<ul class="sub-menu">
-							<li><a href="classes">Our Claasses</a></li>
-							<li><a href="classes-details">Claasses Details</a></li>
-						</ul>
-					</li> --}}
-                    <li><a href="pendaftaran">Pendaftaran</a></li>
-                    {{-- <li><a href="blog">Blog</a>
-						<ul class="sub-menu">
-							<li><a href="blog">Our Blog</a></li>
-							<li><a href="single-blog">Blog Details</a></li>
-						</ul>
-                    </li> --}}
-                    {{-- <li><a href="contact">Contact</a></li> --}}
-				</ul>
+					<li><a href="pendaftaran">Pendaftaran</a></li>
+                </ul>
 			</div>
 		</div>
 	</header>
@@ -91,14 +78,6 @@
 
     <!-- Hero Section -->
 	<section class="hero-section">
-		<div class="hero-social-warp">
-			<div class="hero-social">
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-instagram"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-linkedin"></i></a>
-			</div>
-		</div>
 		<div class="hero-slider owl-carousel">
 				<div class="hs-style-3 text-center">
 					<div class="container">
@@ -117,8 +96,46 @@
 	<!-- Classes Section -->
 	<section class="classes-section spad">
 		<div class="container">
+            <div class="section-title text-center">
+				<h2>Berita Terbaru Pesantren Daarul Qolam</h2>
+            </div>
+			<div class="classes-slider owl-carousel">
+				<div class="classes-item">
+					<div class="ci-text">
+                        <img src="/frontend/ahana/img/blog/53.jpg" alt="image" style="height:288px;">
+                        <p></p>
+                        <h4>Lomba Keahlian Tajwid</h4>
+                        <p>Lomba ini sudah menjadi kebiasaan bagi warga pesantren., Dalam ilmu Qiraah, tajwid berarti mengeluarkan huruf dari tempatnya dengan memberikan sifat-sifat yang dimilikinya. Jadi ilmu tajwid adalah suatu ilmu yang mempelajari bagaimana cara membunyikan atau mengucapkan huruf-huruf yang terdapat dalam kitab suci Al-Qur'an maupun bukan.</p>
+                    </div>
+				</div>
+				<div class="classes-item">
+					<div class="ci-text">
+                        <img src="/frontend/ahana/img/blog/54.jpg" alt="image" style="height:288px;">
+                        <p></p>
+                        <h4>Ziarah</h4>
+                        <p>Ziarah sudah menjadi kebiasaan bagi sebagian orang muslim di Indonesia, kegiatan ini juga menjadi kegiatan rutin di pondok-pondok pesantren. Biasanya para santri berziarah pada hari jum’at ke makam-makam guru, ustadz, kyai, ulama, atau sanak saudara. Ada yang malam jum’at, ba’da shalat shubuh, atau ba’da shalat jum’at. Ziarah kubur dilakukan dengan membaca tahlil, dzikir, dan doa. Sebagian santri juga sering membaca Alquran disamping makam yang diziarahi.</p>
+                    </div>
+				</div>
+				<div class="classes-item">
+					<div class="ci-text">
+                        <img src="/frontend/ahana/img/blog/55.jpg" alt="image" style="height:288px;">
+                        <p></p>
+                        <h4>Ro'an / Bersih-bersih</h4>
+                        <p>Ro’an adalah kegiatan kerja bakti para santri. Ro’an biasanya diidentikkan dengan kegiatan bersih-bersih pondok pesantren di setiap hari libur atau menjelang perayaan-perayaan. Terkadang ro’an juga menjadi istilah gotong royong santri ketika membangun sebuah bangunan seperti ngecor, nembok, dan sebagainya.</p>
+                    </div>
+                </div>
+                <div class="classes-item">
+					<div class="ci-text">
+                        <img src="/frontend/ahana/img/blog/52.jpg" alt="image" style="height:288px;">
+                        <p></p>
+                        <h4>Lomba Ceramah</h4>
+						<p>Khitobah adalah kegiatan bercerama para santri. Secara bergilir para santri maju kedepan untuk belajar berpidato/ceramah. Tema yang dibawakan bisa tentang apa saja. Satu-dua kali para santri menyelipkan Ayat Alquran atau hadits sebagai landasan bicaranya. </p>
+                    </div>
+				</div>
+			</div>
+            <p></p>
 			<div class="section-title text-center">
-				<img src="/frontend/ahana/img/icons/logo-icon.png" alt="">
+                <p></p>
 				<h2>Profil Pesantren Daarul Qolam</h2>
 				<p>Badan Hukum Akta Notaris No.9 Tahun 1999 (Moenarni Moeliono.Sh)</p>
             </div>
@@ -192,7 +209,85 @@
 			</div>
 		</div>
 	</section>
-	<!-- Review Section end -->
+    <!-- Review Section end -->
+
+    <section class="classes-section spad">
+		<div class="container">
+            <div class="section-title text-center">
+				<h2>Testimoni Alumni</h2>
+            </div>
+			<div class="classes-slider owl-carousel">
+				<div class="classes-item">
+					<div class="ci-text">
+                        <img src="/frontend/ahana/img/blog/53.jpg" alt="image" style="height:288px;">
+						<h4>Lomba Keahlian Tajwid</h4>
+                        <p>Lomba ini sudah menjadi kebiasaan bagi warga pesantren., Dalam ilmu Qiraah, tajwid berarti mengeluarkan huruf dari tempatnya dengan memberikan sifat-sifat yang dimilikinya. Jadi ilmu tajwid adalah suatu ilmu yang mempelajari bagaimana cara membunyikan atau mengucapkan huruf-huruf yang terdapat dalam kitab suci Al-Qur'an maupun bukan.</p>
+                    </div>
+					<div class="ci-bottom">
+						<div class="ci-author">
+							<div class="author-text">
+							</div>
+                        </div>
+                        <a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
+                        <p></p>
+                    </div>
+				</div>
+				<div class="classes-item">
+					<div class="ci-text">
+                        <img src="/frontend/ahana/img/blog/54.jpg" alt="image" style="height:288px;">
+						<h4>Ziarah</h4>
+                        <p>Ziarah sudah menjadi kebiasaan bagi sebagian orang muslim di Indonesia, kegiatan ini juga menjadi kegiatan rutin di pondok-pondok pesantren. Biasanya para santri berziarah pada hari jum’at ke makam-makam guru, ustadz, kyai, ulama, atau sanak saudara. Ada yang malam jum’at, ba’da shalat shubuh, atau ba’da shalat jum’at. Ziarah kubur dilakukan dengan membaca tahlil, dzikir, dan doa. Sebagian santri juga sering membaca Alquran disamping makam yang diziarahi.</p>
+                    </div>
+					<div class="ci-bottom">
+						<div class="ci-author">
+							<div class="author-text">
+							</div>
+						</div>
+						<a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
+                        <p></p>
+                    </div>
+				</div>
+				<div class="classes-item">
+					<div class="ci-text">
+                        <img src="/frontend/ahana/img/blog/55.jpg" alt="image" style="height:288px;">
+						<h4>Ro'an / Bersih-bersih</h4>
+                        <p>Ro’an adalah kegiatan kerja bakti para santri. Ro’an biasanya diidentikkan dengan kegiatan bersih-bersih pondok pesantren di setiap hari libur atau menjelang perayaan-perayaan. Terkadang ro’an juga menjadi istilah gotong royong santri ketika membangun sebuah bangunan seperti ngecor, nembok, dan sebagainya.</p>
+                    </div>
+					<div class="ci-bottom">
+						<div class="ci-author">
+							<div class="author-text">
+							</div>
+						</div>
+						<a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="classes-item">
+					<div class="ci-text">
+                        <img src="/frontend/ahana/img/blog/52.jpg" alt="image" style="height:288px;">
+						<h4>Lomba Ceramah</h4>
+						<p>Khitobah adalah kegiatan bercerama para santri. Secara bergilir para santri maju kedepan untuk belajar berpidato/ceramah. Tema yang dibawakan bisa tentang apa saja. Satu-dua kali para santri menyelipkan Ayat Alquran atau hadits sebagai landasan bicaranya. </p>
+                    </div>
+					<div class="ci-bottom">
+						<div class="ci-author">
+							<div class="author-text">
+							</div>
+						</div>
+						<a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
+                        <p></p>
+                    </div>
+				</div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div id="map" class="bg-white">
+                    <a href="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.2627012752832!2d107.58507001477318!3d-6.978298794958751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9257328d2e5%3A0xbc78bb2943540a25!2sDaarul%20Qolam!5e0!3m2!1sid!2sid!4v1581647264724!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></a>
+                </div>
+            </div>
+		</div>
+	</section>
+    <!-- Classes Section end -->
+
+
 
 
 	<!-- Footer Section -->
