@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Session;
 
 class PendaftaranController extends Controller
 {
@@ -92,9 +93,8 @@ class PendaftaranController extends Controller
      */
     public function edit($id)
     {
-        $pendaftaran = pendaftaran::findOrFail($id);
-        $select = $pendaftaran->tag->pluck('id')->toArray();
-        return view('admin.pendaftaran.edit', compact('pendaftaran', 'cat', 'tag', 'select'));
+        $pendaftaran = Pendaftaran::findOrFail($id);
+        return view('admin.pendaftaran.edit', compact('pendaftaran'));
     }
 
     /**
@@ -106,39 +106,31 @@ class PendaftaranController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'judul' => 'required',
-            'konten' => 'required|min:50',
-            'foto' => 'mimes:jpeg.jpg.png.gif|max:2048',
-            'kategori' => 'required',
-            'tag' => 'required'
-        ]);
-        $pendaftaran = pendaftaran::findOrFail($id);
-        $pendaftaran->judul = $request->judul;
-        $pendaftaran->slug = str_slug($request->judul);
-        $pendaftaran->konten = $request->konten;
-        $pendaftaran->user_id = Auth::user()->id;
-        $pendaftaran->kategori_id = $request->kategori;
-        # Foto
-        if ($request->hasFile('foto')) {
-            $file = $request->file('foto');
-            $path = public_path().'/assets/img/pendaftaran/';
-            $filename = str_random(6).'_'.$file->getClientOriginalName();
-            $upload = $file->move($path, $filename);
-            if($pendaftaran->foto){
-                $old_foto = $pendaftaran->foto;
-                $filepath = public_path().'/assets/img/pendaftaran/'.$pendaftaran->foto;
-                try {
-                    File::delete($filepath);
-                } catch (FileNotFoundException $e) {
-                    //Exception $e;
-                }
-            }
-            $pendaftaran->foto = $filename;
-        }
+        $pendaftaran = Pendaftaran::findOrFail($id);
+        $pendaftaran->pilihangkatan = $request->pilihangkatan;
+        $pendaftaran->namalengkap = $request->namalengkap;
+        $pendaftaran->tempatlahir = $request->tempatlahir;
+        $pendaftaran->tanggallahir = $request->tanggallahir;
+        $pendaftaran->nomortelpon = $request->notelpon;
+        $pendaftaran->email = $request->email;
+        $pendaftaran->provinsi = $request->provinsi;
+        $pendaftaran->kabkota = $request->kabkota;
+        $pendaftaran->kecamatan = $request->kecamatan;
+        $pendaftaran->desakelurahan = $request->desakelurahan;
+        $pendaftaran->alamat = $request->alamatlengkap;
+        $pendaftaran->kodepos = $request->kodepos;
+        $pendaftaran->namalengkapayah = $request->namaayah;
+        $pendaftaran->namalengkapibu = $request->namaibu;
+        $pendaftaran->pekerjaanayah = $request->pekerjaanayah;
+        $pendaftaran->pekerjaanibu = $request->pekerjaanibu;
+        $pendaftaran->notelprumah = $request->notelprumah;
+        $pendaftaran->notelphp = $request->notelphp;
+
         $pendaftaran->save();
-        $pendaftaran->tag()->sync($request->tag);
-        toastr()->success('Data pendaftaran berhasil diubah!');
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan</b>!"
+        ]);
         return redirect()->route('pendaftaran.index');
     }
 
@@ -150,19 +142,11 @@ class PendaftaranController extends Controller
      */
     public function destroy($id)
     {
-        $pendaftaran = pendaftaran::findOrFail($id);
-        if($pendaftaran->foto){
-            $old_foto = $pendaftaran->foto;
-            $filepath = public_path().'/assets/img/pendaftaran/'.$pendaftaran->foto;
-            try {
-                File::delete($filepath);
-            } catch (FileNotFoundException $e) {
-                //Exception $e;
-            }
-        }
-        $pendaftaran->tag()->detach($pendaftaran->id);
-        $pendaftaran->delete();
-        toastr()->error('Data pendaftaran berhasil dihapus!');
+        $pendaftaran = Pendaftaran::findOrfail($id)->delete();
+        Session::flash("flash_notification",[
+            "level" => "Success",
+            "message" => "Berhasil menghapus<b>"
+        ]);
         return redirect()->route('pendaftaran.index');
     }
 }

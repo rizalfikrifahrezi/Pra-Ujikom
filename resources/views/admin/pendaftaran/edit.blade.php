@@ -1,148 +1,125 @@
 @extends('layouts.master')
 
-@section('title')
-    Post Edit
-@endsection
-
-@section('header') Edit Post @endsection
-@section('desc') Tulis post barumu! @endsection
-
 @section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Data Pendaftaran Pesantren Daarul Qolam</div>
+                <div class="card-body">
+                    <form action="{{ route('pendaftaran.update', $pendaftaran->id) }}" method="post" enctype="multipart/form-data">
+                       <input name="_method" type="hidden" value="PATCH">
+                        {{ csrf_field() }}
 
-<div class="row">
-    <div class="col-12">
-      <div class="card">
-        <div class="card-header">
-          <h4>Hai, <b>{{ Auth::user()->name }}</b>. Edit postmu!</h4>
-        </div>
-        <div class="card-body">
-        <form action="{{ route('artikel.update', $artikel->id) }}" method="POST" enctype="multipart/form-data">
-        @csrf
-        @method('PUT')
-            <div class="form-group row mb-4">
-                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
-                <div class="col-sm-12 col-md-10">
-                    <input name="judul" value="{{ $artikel->judul }}" type="text" class="form-control{{ $errors->has('judul') ? ' is-invalid' : '' }}">
-
-                @if ($errors->has('judul'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('judul') }}</strong>
-                    </span>
-                @endif
-                </div>
-            </div>
-          <div class="form-group row mb-4">
-            <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Category</label>
-            <div class="col-sm-12 col-md-10">
-              <select class="form-control selectric" name="kategori">
-                <option value="">-- Pilih Kategori --</option>
-                @foreach($cat as $data)
-                    <option value="{{ $data->id }}" {{ ($data->id == $artikel->kategori_id) ? 'selected' : '' }}>{{ $data->nama }}</option>
-                @endforeach
-              </select>
-            </div>
-          </div>
-          <div class="form-group row mb-12">
-            <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Content</label>
-            <div class="col-sm-12 col-md-10">
-                <textarea name="konten" id="editor1">{{ $artikel->konten }}</textarea>
-
-            @if ($errors->has('konten'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('konten') }}</strong>
-                </span>
-            @endif
-            </div>
-          </div>
-          <div class="form-group row mb-4">
-            <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Thumbnail</label>
-            <div class="col-sm-12 col-md-10">
-              <div id="image-preview" class="image-preview" style="background-image: url('{{ asset('assets/img/artikel/'.$artikel->foto) }}'); background-size: cover; background-position: center center;">
-                <label for="image-upload" id="image-label">Choose File</label>
-                <input type="file" name="foto" id="image-upload" />
-
-            @if ($errors->has('foto'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('foto') }}</strong>
-                </span>
-            @endif
-              </div>
-            </div>
-          </div>
-          <div class="form-group row mb-4">
-            <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tags</label>
-            <div class="col-sm-12 col-md-10">
-                <select class="form-control selectric" name="tag[]" multiple>
-                    {{--  <option value="">- Pilih Tag -</option>  --}}
-                    @foreach ($tag as $data)
-                        <option value="{{ $data->id }}" {{ (in_array($data->id, $select)) ? 'selected' : '' }}>{{ $data->name }}</option>
-                    @endforeach
-                </select>
-
-            @if ($errors->has('tag'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('tag') }}</strong>
-                </span>
-            @endif
-            </div>
-          </div>
-          <div class="form-group row mb-4">
-            <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2"></label>
-            <div class="col-sm-12 col-md-7">
-              <button type="submit" class="btn btn-success">Edit Post</button>
-              <a href="{{ route('artikel.index') }}" class="btn btn-secondary">Kembali</a>
-            </div>
-          </div>
-        </form>
-        </div>
-      </div>
+    <div class="form-group">
+    <label for="">Pendidikan</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="pilihangkatan" value="{{ $pendaftaran->pilihangkatan}}">
+            <option>Pilih Pendidikan</option>
+            <option>Tk Al-Qur'an</option>
+            <option>Sd Islam Terpadu</option>
+            <option>Smp Islam Terpadu</option>
+        </select>
     </div>
-  </div>
 
-@endsection
+    <div class="form-group">
+            <label for="">Nama Lengkap</label>
+        <input class="form-control" type="text" name="namalengkap" value="{{ $pendaftaran->namalengkap }}">
+    </div>
 
-@section('css')
-    <!-- General CSS Files -->
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/fontawesome/css/all.min.css')}}">
+    <div class="form-group">
+            <label for="">Tempat lahir</label>
+        <input class="form-control" type="text" name="tempatlahir" value="{{ $pendaftaran->tempatlahir }}">
+    </div>
 
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/ckeditor/contents.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/select2/dist/css/select2.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/jquery-selectric/selectric.css')}}">
-    {{--  <link rel="stylesheet" href="{{ asset('admin/assets/modules/summernote/summernote-bs4.css')}}">  --}}
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')}}">
+    <div class="form-group">
+            <label for="">Tanggal Lahir</label>
+        <input class="form-control" type="text" name="tanggallahir" value="{{ $pendaftaran->tanggallahir }}">
+    </div>
 
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/css/components.css')}}">
-@endsection
+    <div class="form-group">
+            <label for="">Nomor Telpon</label>
+        <input class="form-control" type="text" name="notelpon" value="{{ $pendaftaran->nomortelpon }}">
+    </div>
 
-@section('script')
-    <!-- General JS Scripts -->
-    <script src="{{ asset('admin/assets/modules/jquery.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/popper.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/tooltip.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/nicescroll/jquery.nicescroll.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/moment.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/js/stisla.js')}}"></script>
+    <div class="form-group">
+            <label for="">Email</label>
+        <input class="form-control" type="text" name="email" value="{{ $pendaftaran->email }}">
+    </div>
 
-    <!-- JS Libraies -->
-    <script src="{{ asset('admin/assets/modules/select2/dist/js/select2.full.min.js')}}"></script>
-    {{--  <script src="{{ asset('admin/assets/modules/summernote/summernote-bs4.js')}}"></script>  --}}
-    <script src="{{ asset('admin/assets/modules/ckeditor/ckeditor.js') }}"></script>
-    <script>
-        CKEDITOR.replace('editor1')
-    </script>
-    <script src="{{ asset('admin/assets/modules/jquery-selectric/jquery.selectric.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/upload-preview/assets/js/jquery.uploadPreview.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js')}}"></script>
+    <div class="form-group">
+            <label for="">Provinsi</label>
+        <input class="form-control" type="text" name="provinsi" value="{{ $pendaftaran->provinsi }}">
+    </div>
 
-    <!-- Page Specific JS File -->
-    <script src="{{ asset('admin/assets/js/page/features-post-create.js')}}"></script>
+    <div class="form-group">
+            <label for="">Kab / Kota</label>
+        <input class="form-control" type="text" name="kabkota" value="{{ $pendaftaran->kabkota }}">
+    </div>
 
-    <!-- Template JS File -->
-    <script src="{{ asset('admin/assets/js/scripts.js')}}"></script>
-    <script src="{{ asset('admin/assets/js/custom.js')}}"></script>
-@endsection
+    <div class="form-group">
+            <label for="">Kecamatan</label>
+        <input class="form-control" type="text" name="kecamatan" value="{{ $pendaftaran->kecamatan }}">
+    </div>
+
+    <div class="form-group">
+            <label for="">Desa / Kelurahan</label>
+        <input class="form-control" type="text" name="desakelurahan" value="{{ $pendaftaran->desakelurahan }}">
+    </div>
+
+    <div class="form-group">
+            <label for="">Alamat Lengkap</label>
+        <input class="form-control" type="text" name="alamatlengkap" value="{{ $pendaftaran->alamatlengkap }}">
+    </div>
+
+    <div class="form-group">
+            <label for="">Kode Pos</label>
+        <input class="form-control" type="text" name="kodepos" value="{{ $pendaftaran->kodepos }}">
+    </div>
+
+    <div class="form-group">
+            <label for="">Nama Ayah</label>
+        <input class="form-control" type="text" name="namaayah" value="{{ $pendaftaran->namalengkapayah }}">
+    </div>
+
+    <div class="form-group">
+            <label for="">Nama Ibu</label>
+        <input class="form-control" type="text" name="namaibu" value="{{ $pendaftaran->namalengkapibu }}">
+    </div>
+
+    <div class="form-group">
+            <label for="">Pekerjaan Ayah</label>
+        <input class="form-control" type="text" name="pekerjaanayah" value="{{ $pendaftaran->pekerjaanayah }}">
+    </div>
+
+    <div class="form-group">
+            <label for="">Pekerjaan Ibu</label>
+        <input class="form-control" type="text" name="pekerjaanibu" value="{{ $pendaftaran->pekerjaanibu }}">
+    </div>
+
+    <div class="form-group">
+            <label for="">No Telp Rumah</label>
+        <input class="form-control" type="text" name="notelprumah" value="{{ $pendaftaran->notelprumah }}">
+    </div>
+
+    <div class="form-group">
+            <label for="">No Telp Hp</label>
+        <input class="form-control" type="text" name="notelphp" value="{{ $pendaftaran->notelphp }}">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-info">
+        Simpan Data
+        </button>
+    </div>
+
+    <div class="form-group">
+        <a href="{{ url('admin/pendaftaran') }}" class="btn btn-outline-info">Kembali</a>
+    </div>
+
+        </form>
+            </div>
+                </div>
+                    </div>
+                        </div>
+                            </div>
+                                @endsection

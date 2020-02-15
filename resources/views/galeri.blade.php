@@ -122,33 +122,32 @@
                 <div class="col-lg-4 col-md-9">
 					<div class="blog-item">
 						<img src="/frontend/ahana/img/blog/51.jpg" alt="">
-
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/11.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Halaman Parkiran Masjid</a></h2>
-							<p>Dengan fasilitas aula, taman dan lapangan parkir</p>
+                        <div class="bi-text">
+							<p>Kegiatan belajar mengaji dan tadarus Al-Qur'an</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/13.jpg" alt="">
+						<img src="/frontend/ahana/img/blog/61.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">Masjid</a></h2>
-							<p>Dengan fasilitas tempat wudhu, mukena dan alat solat</p>
+							<p>Kegiatan sholat berjamaah wajib di Pesantren</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/14.jpg" alt="">
+						<img src="/frontend/ahana/img/blog/62.jpg" alt="">
 						<div class="bi-text">
-							<h2><a href="single-blog">Asrama</a></h2>
-							<p>Dengan fasilitas tempat tidur, selimut dan bantal</p>
+							<p>Kegiatan belajar mengajar di pondok Pesantren</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="blog-item">
+						<img src="/frontend/ahana/img/blog/iduladha.jpg" alt="">
+						<div class="bi-text">
+							<p>Kegiatan Idul Adha pondok pesantren tahun 2018</p>
 						</div>
 					</div>
 				</div>

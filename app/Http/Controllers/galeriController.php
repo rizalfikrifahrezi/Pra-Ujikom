@@ -83,7 +83,8 @@ class galeriController extends Controller
      */
     public function edit($id)
     {
-        //
+        $galeri = galeri::findOrFail($id);
+        return view('admin.galeri.edit', compact('galeri'));
     }
 
     /**
@@ -95,7 +96,33 @@ class galeriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $galeri = galeri::findOrFail($id);
+
+        if ($request->hasFile('foto')) {
+            $file = $request->file('foto');
+            $destinationPath = public_path() . '/assets/img/galeri/';
+            $filename = Str::random(40) . '_' . $file->getClientOriginalName();
+            $uploadSuccess = $file->move($destinationPath, $filename);
+            $galeri->foto = $filename;
+
+        if ($galeri->galeri) {
+            $old_cover = $galeri->foto;
+            $filepath = public_path() . '/assets/img/galeri/' . $galeri->foto;
+            try {
+                File::delete($filepath);
+            } catch (FileNotFoundException $e) {
+                //Exception $e;
+            }
+        }
+        $galeri->foto = $filename;
+        }
+
+        $galeri->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan</b>!"
+        ]);
+        return redirect()->route('galeri.index');
     }
 
     /**
@@ -106,6 +133,11 @@ class galeriController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $galeri = galeri::findOrfail($id)->delete();
+        Session::flash("flash_notification",[
+             "level" => "Success",
+             "message" => "Berhasil menghapus<b>"
+         ]);
+        return redirect()->route('galeri.index');
     }
 }

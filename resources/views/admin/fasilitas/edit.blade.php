@@ -22,7 +22,7 @@
         <input class="form-control" type="text" name="namafasilitas" value="{{ $fasilitas->namafasilitas}}">
         </div>
         <div class="form-group">
-            <label for="">Penjelasan</label>
+            <label for="">Deskripsi</label>
         <input class="form-control" type="text" name="penjelasan" value="{{ $fasilitas->penjelasan }}">
         </div>
     <div class="form-group">
@@ -31,7 +31,7 @@
         </button>
     </div>
     <div class="form-group">
-        <a href="{{ url('admin/guru') }}" class="btn btn-outline-info">Kembali</a>
+        <a href="{{ url('admin/fasilitas') }}" class="btn btn-outline-info">Kembali</a>
     </div>
         </form>
             </div>

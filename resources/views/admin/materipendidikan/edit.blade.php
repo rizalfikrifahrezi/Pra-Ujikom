@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    Edit
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -33,7 +37,7 @@
         </button>
     </div>
     <div class="form-group">
-        <a href="{{ url('admin/guru') }}" class="btn btn-outline-info">Kembali</a>
+        <a href="{{ url('admin/materipendidikan') }}" class="btn btn-outline-info">Kembali</a>
     </div>
         </form>
             </div>

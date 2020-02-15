@@ -22,7 +22,7 @@
                             <tr>
                                 <th>Nama Bidang</th>
                                 <th>Mata Pelajaran</th>
-                                <th style="text-align: center;">Aksi</th>
+                                <th style="text-align: center;">Bantuan</th>
                             </tr>
                         </thead>
                         <tbody>

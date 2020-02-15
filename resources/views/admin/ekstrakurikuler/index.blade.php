@@ -22,7 +22,7 @@
                             <tr>
                                 <th>Foto</th>
                                 <th>Nama Ekstrakurikuler</th>
-                                <th style="text-align: center;">Aksi</th>
+                                <th style="text-align: center;">Bantuan</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,9 +39,6 @@
 									<a href="{{route('ekstrakurikuler.edit', $data->id)}}"
 										class="zmdi zmdi-edit btn btn-warning btn-rounded btn-floating btn-outline"> Edit
                                     </a>
-                                    <a href="{{route('ekstrakurikuler.show', $data->id)}}"
-										class="zmdi zmdi-eye btn btn-success btn-rounded btn-floating btn-outline"> Show
-									</a>
 										<input type="hidden" name="_method" value="DELETE">
 										<button type="submit" class="zmdi zmdi-delete btn-rounded btn-floating btn btn-dangerbtn btn-danger btn-outline"> Delete</button>
 									</form>

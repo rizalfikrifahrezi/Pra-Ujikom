@@ -34,9 +34,8 @@ class EkstrakurikulerController extends Controller
      */
     public function create()
     {
-        $tag = Tag::all();
-        $cat = Kategori::all();
-        return view('admin.ekstrakurikuler.create', compact('tag', 'cat'));
+        $ekstrakurikuler = Ekstrakurikuler::all();
+        return view('admin.ekstrakurikuler.create', compact('ekstrakurikuler'));
     }
 
     /**
@@ -75,8 +74,8 @@ class EkstrakurikulerController extends Controller
      */
     public function show($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        return view('admin.artikel.show', compact('artikel'));
+        $ekstrakurikuler = Ekstrakurikuler::findOrFail($id);
+        return view('admin.ekstrakurikuler.show', compact('ekstrakurikuler'));
     }
 
     /**
@@ -87,11 +86,8 @@ class EkstrakurikulerController extends Controller
      */
     public function edit($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        $cat = Kategori::all();
-        $tag = Tag::all();
-        $select = $artikel->tag->pluck('id')->toArray();
-        return view('admin.artikel.edit', compact('artikel', 'cat', 'tag', 'select'));
+        $ekstrakurikuler = Ekstrakurikuler::findOrFail($id);
+        return view('admin.ekstrakurikuler.edit', compact('ekstrakurikuler'));
     }
 
     /**
@@ -103,40 +99,34 @@ class EkstrakurikulerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'judul' => 'required',
-            'konten' => 'required|min:50',
-            'foto' => 'mimes:jpeg.jpg.png.gif|max:2048',
-            'kategori' => 'required',
-            'tag' => 'required'
-        ]);
-        $artikel = Artikel::findOrFail($id);
-        $artikel->judul = $request->judul;
-        $artikel->slug = str_slug($request->judul);
-        $artikel->konten = $request->konten;
-        $artikel->user_id = Auth::user()->id;
-        $artikel->kategori_id = $request->kategori;
-        # Foto
+        $ekstrakurikuler = Ekstrakurikuler::findOrFail($id);
+        $ekstrakurikuler->namaekskul = $request->namaekskul;
+
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
-            $path = public_path().'/assets/img/artikel/';
-            $filename = str_random(6).'_'.$file->getClientOriginalName();
-            $upload = $file->move($path, $filename);
-            if($artikel->foto){
-                $old_foto = $artikel->foto;
-                $filepath = public_path().'/assets/img/artikel/'.$artikel->foto;
-                try {
-                    File::delete($filepath);
-                } catch (FileNotFoundException $e) {
-                    //Exception $e;
-                }
+            $destinationPath = public_path() . '/assets/img/ekstrakurikuler/';
+            $filename = Str::random(40) . '_' . $file->getClientOriginalName();
+            $uploadSuccess = $file->move($destinationPath, $filename);
+            $ekstrakurikuler->foto = $filename;
+
+        if ($ekstrakurikuler->ekstrakurikuler) {
+            $old_cover = $ekstrakurikuler->foto;
+            $filepath = public_path() . '/assets/img/ekstrakurikuler/' . $ekstrakurikuler->foto;
+            try {
+                File::delete($filepath);
+            } catch (FileNotFoundException $e) {
+                //Exception $e;
             }
-            $artikel->foto = $filename;
         }
-        $artikel->save();
-        $artikel->tag()->sync($request->tag);
-        toastr()->success('Data artikel berhasil diubah!');
-        return redirect()->route('artikel.index');
+        $ekstrakurikuler->foto = $filename;
+        }
+
+        $ekstrakurikuler->save();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menyimpan</b>!"
+        ]);
+        return redirect()->route('ekstrakurikuler.index');
     }
 
     /**
@@ -147,19 +137,11 @@ class EkstrakurikulerController extends Controller
      */
     public function destroy($id)
     {
-        $artikel = Artikel::findOrFail($id);
-        if($artikel->foto){
-            $old_foto = $artikel->foto;
-            $filepath = public_path().'/assets/img/artikel/'.$artikel->foto;
-            try {
-                File::delete($filepath);
-            } catch (FileNotFoundException $e) {
-                //Exception $e;
-            }
-        }
-        $artikel->tag()->detach($artikel->id);
-        $artikel->delete();
-        toastr()->error('Data artikel berhasil dihapus!');
-        return redirect()->route('artikel.index');
+        $ekstrakurikuler = Ekstrakurikuler::findOrfail($id)->delete();
+        Session::flash("flash_notification",[
+             "level" => "Success",
+             "message" => "Berhasil menghapus<b>"
+         ]);
+        return redirect()->route('ekstrakurikuler.index');
     }
 }

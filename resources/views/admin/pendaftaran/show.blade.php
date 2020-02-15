@@ -1,26 +1,26 @@
 @extends('layouts.master')
 
 @section('title')
-{{$artikel->slug}}
+{{$pendaftaran->slug}}
 @endsection
 
 @section('header')
-{{$artikel->judul}}
+{{$pendaftaran->judul}}
 @endsection
 
 @section('button-add')
     <div class="section-header-button">
-        <a href="{{ route('artikel.index') }}" class="btn btn-primary">Kembali</a>
+        <a href="{{ route('pendaftaran.index') }}" class="btn btn-primary">Kembali</a>
     </div>
 @endsection
 
-@section('header-2') {{$artikel->judul}}  @endsection
-@section('desc') Author : {{ $artikel->user->name }} @endsection
+@section('header-2') {{$pendaftaran->judul}}  @endsection
+@section('desc') Author : {{ $pendaftaran->user->name }} @endsection
 
 @section('content')
     <div class="card">
         <div class="card-body">
-            <p>{!! $artikel->konten !!}</p>
+            <p>{!! $pendaftaran->konten !!}</p>
         </div>
       </div>
 

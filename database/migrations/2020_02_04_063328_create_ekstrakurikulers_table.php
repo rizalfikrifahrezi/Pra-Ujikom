@@ -16,8 +16,7 @@ class CreateEkstrakurikulersTable extends Migration
         Schema::create('ekstrakurikulers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('foto');
-            $table->string('ekstrakurikuler');
-            $table->string('penjelasan');
+            $table->string('namaekskul');
             $table->timestamps();
         });
     }

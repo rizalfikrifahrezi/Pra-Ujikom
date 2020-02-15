@@ -103,10 +103,10 @@
                                 <p></p>
                             </div>
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Pilih Angkatan</label>
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Pilih Pendidikan</label>
                                     <div class="col-sm-12 col-md-10">
                                         <select name="pilihangkatan" class="form-control" id="exampleFormControlSelect1">
-                                            <option>Pilih Angkatan</option>
+                                            <option>Pilih Pendidikan</option>
                                             <option>Tk Al-Qur'an</option>
                                             <option>Sd Islam Terpadu</option>
                                             <option>Smp Islam Terpadu</option>
@@ -341,7 +341,7 @@
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Pekerjaan Ayah</label>
+                                <label class="col-form-label text-md-left col-12 col-md-2 col-lg-2">Pekerjaan Ibu</label>
                                 <div class="col-sm-12 col-md-10">
                                     <input name="pekerjaanibu" type="text" class="form-control{{ $errors->has('pekerjaanibu') ? ' is-invalid' : '' }}" type="text" placeholder="Pekerjaan Ibu" required=""data-validation-required-message="Pekerjaan Ibu Wajib Diisi" aria-invalid="false">
 
