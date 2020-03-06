@@ -20,7 +20,7 @@
                     <table id="bs4-table" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Nama Bidang</th>
+                                <th>Angkatan</th>
                                 <th>Mata Pelajaran</th>
                                 <th style="text-align: center;">Bantuan</th>
                             </tr>
@@ -29,7 +29,7 @@
                             @foreach ($materipendidikan ?? '' as $data)
                             <tr>
                                 <td>{{$data->namabidang}}</td>
-                                <td>{{$data->matapelajaran}}</td>
+                                <td>{!! nl2br($data->matapelajaran) !!}</td>
 
 
 								<td style="text-align: center;">

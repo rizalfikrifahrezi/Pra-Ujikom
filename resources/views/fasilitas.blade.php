@@ -74,88 +74,6 @@
 	</header>
 	<!-- Header Section end -->
 
-	<!-- Infor Model -->
-	<div class="infor-model-warp">
-		<div class="infor-model d-flex align-items-center">
-			<div class="infor-close">
-				<i class="material-icons">close</i>
-			</div>
-			<div class="infor-middle">
-				<a href="#" class="infor-logo">
-					<img src="/frontend/ahana/img/logo-2.png" alt="">
-				</a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-				<div class="insta-imgs">
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/1.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/2.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/3.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/4.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/5.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/6.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<form class="infor-form">
-					<input type="text" placeholder="Your Email">
-					<button><img src="/frontend/ahana/img/icons/send.png" alt=""></button>
-				</form>
-				<div class="insta-social">
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-instagram"></i></a>
-					<a href="#"><i class="fa fa-facebook"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Infor Model end -->
-
 	<!-- Page top Section -->
 	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
 		<div class="container">
@@ -208,88 +126,18 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/12.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Halaman Depan Sekolah</a></h2>
-							<p>Dengan fasilitas lapang dan tempat upacara</p>
-						</div>
+                @foreach ($fasilitas as $item)
 
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/11.jpg" alt="">
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-item">
+                        <img src="{{asset('assets/img/fasilitas/' .$item->foto)}}" alt="" height="230px">
 						<div class="bi-text">
-							<h2><a href="single-blog">Halaman Parkiran Masjid</a></h2>
-							<p>Dengan fasilitas aula, taman dan lapangan parkir</p>
+                        <h2><a href="single-blog">{{ $item->namafasilitas }}</a></h2>
+                        <p>{{ $item->penjelasan }}</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/13.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Masjid</a></h2>
-							<p>Dengan fasilitas tempat wudhu, mukena dan alat solat</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/14.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Asrama</a></h2>
-							<p>Dengan fasilitas tempat tidur, selimut dan bantal</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/15.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Kantin</a></h2>
-							<p>Dengan fasilitas meja makan serta terdapat tempat cuci tangan</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/16.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Ruang Komputer</a></h2>
-							<p>Dengan fasilitas komputer serta terdapat printer untuk santri</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/17.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Ruang Kelas</a></h2>
-							<p>Dengan fasilitas meja, kursi serta papan tulis</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/18.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Kamar Mandi</a></h2>
-							<p>Dengan fasilitas bak air serta handuk mandi</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/19.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Tempat Jemur</a></h2>
-							<p>Dengan fasilitas capit untuk menjemur baju dan lainnya</p>
-						</div>
-					</div>
-				</div>
+                @endforeach
 			</div>
 		</div>
 	</section>

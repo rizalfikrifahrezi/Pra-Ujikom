@@ -96,7 +96,7 @@
                         <li class="nav-item has-treeview menu-open">
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                            <a href="/admin/materipendidikan" class="nav-link">
+                            <a href="/galeri" class="nav-link-active">
                                 <p>All</p>
                             </a>
                             </li>
@@ -119,84 +119,18 @@
                         </li>
                     </ul>
                 </div>
+
+                @foreach ($galeri as $item)
                 <div class="col-lg-4 col-md-9">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/51.jpg" alt="">
+						<img src="{{asset('assets/img/galeri/' .$item->foto)}}" alt="" height="230px">
                         <div class="bi-text">
-							<p>Kegiatan belajar mengaji dan tadarus Al-Qur'an</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/61.jpg" alt="">
-						<div class="bi-text">
-							<p>Kegiatan sholat berjamaah wajib di Pesantren</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/62.jpg" alt="">
-						<div class="bi-text">
-							<p>Kegiatan belajar mengajar di pondok Pesantren</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/iduladha.jpg" alt="">
-						<div class="bi-text">
-							<p>Kegiatan Idul Adha pondok pesantren tahun 2018</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/15.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Kantin</a></h2>
-							<p>Dengan fasilitas meja makan serta terdapat tempat cuci tangan</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/16.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Ruang Komputer</a></h2>
-							<p>Dengan fasilitas komputer serta terdapat printer untuk santri</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/17.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Ruang Kelas</a></h2>
-							<p>Dengan fasilitas meja, kursi serta papan tulis</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/18.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Kamar Mandi</a></h2>
-							<p>Dengan fasilitas bak air serta handuk mandi</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/19.jpg" alt="">
-						<div class="bi-text">
-							<h2><a href="single-blog">Tempat Jemur</a></h2>
-							<p>Dengan fasilitas capit untuk menjemur baju dan lainnya</p>
+                        <h2><a href="single-blog">{{ $item->namagaleri }}</a></h2>
+                        <p>{{ $item->galeri }}</p>
 						</div>
 					</div>
                 </div>
-
+                @endforeach
 			</div>
 		</div>
 	</section>

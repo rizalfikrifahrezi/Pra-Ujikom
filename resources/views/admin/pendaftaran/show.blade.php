@@ -1,12 +1,6 @@
 @extends('layouts.master')
 
-@section('title')
-{{$pendaftaran->slug}}
-@endsection
-
-@section('header')
-{{$pendaftaran->judul}}
-@endsection
+@section('content')
 
 @section('button-add')
     <div class="section-header-button">
@@ -14,52 +8,105 @@
     </div>
 @endsection
 
-@section('header-2') {{$pendaftaran->judul}}  @endsection
-@section('desc') Author : {{ $pendaftaran->user->name }} @endsection
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ $pendaftaran->pendaftaran }} &mdash; Pendaftaran</title>
+</head>
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <a name="" id="" class="btn btn-md btn-warning"
+                            href="{{ route('pendaftaran.index') }}" role="button">Kembali</a>
+                    </div>
+                    <div class="card-header">Detail Data Pendaftaran</div>
+                    <div class="card-body">
+                    <form action="{{ route('pendaftaran.show', $pendaftaran->id ) }}" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label for="">Pilih Angkatan</label>
+                            <input type="text" name="pilihangkatan" class="form-control" value="{{ $pendaftaran->pilihangkatan }}" disabled>
+                                </div>
+                            <div class="form-group">
+                                <label for="">Nama Lengkap</label>
+                                <input type="text" name="namalengkap" class="form-control" value="{{ $pendaftaran->namalengkap }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Tempat Lahir</label>
+                                <input type="text" name="tempatlahir" class="form-control" value="{{ $pendaftaran->tempatlahir }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">No Telpon</label>
+                                <input type="text" name="nomortelpon" class="form-control" value="{{ $pendaftaran->nomortelpon }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="text" name="email" class="form-control" value="{{ $pendaftaran->email }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Provinsi</label>
+                                <input type="text" name="provinsi" class="form-control" value="{{ $pendaftaran->provinsi }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Kab / Kota</label>
+                                <input type="text" name="kabkota" class="form-control" value="{{ $pendaftaran->kabkota }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Kecamatan</label>
+                                <input type="text" name="kecamatan" class="form-control" value="{{ $pendaftaran->kecamatan }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Desa / Kelurahan</label>
+                                <input type="text" name="desakelurahan" class="form-control" value="{{ $pendaftaran->desakelurahan }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Alamat Lengkap</label>
+                                <input type="text" name="alamatlengkap" class="form-control" value="{{ $pendaftaran->alamatlengkap }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Kode Pos</label>
+                                <input type="text" name="kodepos" class="form-control" value="{{ $pendaftaran->kodepos }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Nama Lengkap Ayah</label>
+                                <input type="text" name="namalengkapayah" class="form-control" value="{{ $pendaftaran->namalengkapayah }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Nama Lengkap Ibu</label>
+                                <input type="text" name="namalengkapibu" class="form-control" value="{{ $pendaftaran->namalengkapibu }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Pekerjaan Ayah</label>
+                                <input type="text" name="pekerjaanayah" class="form-control" value="{{ $pendaftaran->pekerjaanayah }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Pekerjaan Ibu</label>
+                                <input type="text" name="pekerjaanibu" class="form-control" value="{{ $pendaftaran->pekerjaanibu }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">No Telp Rumah</label>
+                                <input type="text" name="notelprumah" class="form-control" value="{{ $pendaftaran->notelprumah }}" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="">No Telp Hp</label>
+                                <input type="text" name="notelphp" class="form-control" value="{{ $pendaftaran->notelphp }}" disabled>
+                            </div>
 
-@section('content')
-    <div class="card">
-        <div class="card-body">
-            <p>{!! $pendaftaran->konten !!}</p>
+
+
+                            </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+</body>
+</html>
 
-@endsection
-
-@section('css')
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/fontawesome/css/all.min.css')}}">
-
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/datatables/datatables.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css')}}">
-
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/css/components.css')}}">
-@endsection
-
-@section('script')
-    <!-- General JS Scripts -->
-    <script src="{{ asset('admin/assets/modules/jquery.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/popper.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/tooltip.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/nicescroll/jquery.nicescroll.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/moment.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/js/stisla.js')}}"></script>
-
-    <!-- JS Libraies -->
-    <script src="{{ asset('admin/assets/modules/datatables/datatables.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js')}}"></script>
-    <script src="{{ asset('admin/assets/modules/jquery-ui/jquery-ui.min.js')}}"></script>
-
-    <!-- Page Specific JS File -->
-    <script src="{{ asset('admin/assets/js/page/modules-datatables.js')}}"></script>
-
-    <!-- Template JS File -->
-    <script src="{{ asset('admin/assets/js/scripts.js')}}"></script>
-    <script src="{{ asset('admin/assets/js/custom.js')}}"></script>
 @endsection

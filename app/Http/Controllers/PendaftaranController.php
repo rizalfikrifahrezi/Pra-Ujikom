@@ -81,7 +81,7 @@ class PendaftaranController extends Controller
      */
     public function show($id)
     {
-        $pendaftaran = pendaftaran::findOrFail($id);
+        $pendaftaran = Pendaftaran::findOrFail($id);
         return view('admin.pendaftaran.show', compact('pendaftaran'));
     }
 
@@ -142,10 +142,12 @@ class PendaftaranController extends Controller
      */
     public function destroy($id)
     {
-        $pendaftaran = Pendaftaran::findOrfail($id)->delete();
+        $pendaftaran = Pendaftaran::find($id);
+        if(!pendaftaran::destroy($id))return redirect()->back();
         Session::flash("flash_notification",[
             "level" => "Success",
             "message" => "Berhasil menghapus<b>"
+                        . $pendaftaran->nama_pendaftaran."</b>"
         ]);
         return redirect()->route('pendaftaran.index');
     }

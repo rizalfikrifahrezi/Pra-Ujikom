@@ -51,17 +51,16 @@ Route::get('/visimisi', function () {
     return view('visimisi');
 });
 
-Route::get('/galeri', function () {
-    return view('galeri');
-});
+
 
 Route::get('/event-details', function () {
     return view('event-details');
 });
 
-Route::get('/fasilitas', function () {
-    return view('fasilitas');
-});
+    Route::get('/fasilitas', 'FrontendController@index');
+    Route::get('/galeri', 'FrontendController@galeri');
+    Route::get('/ekstrakurikuler', 'FrontendController@ekstrakurikuler');
+    Route::get('/materipendidikan', 'FrontendController@materipendidikan');
 
 Route::get('/single-blog', function () {
     return view('single-blog');

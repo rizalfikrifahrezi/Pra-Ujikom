@@ -10,26 +10,23 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">Data Materi Pendidikan</div>
                 <div class="card-body">
                     <form action="{{ route('materipendidikan.store') }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
-
                         <div class="form-group">
-                            <label for="">Nama Bidang</label>
+                            <label for="">Pilih Angkatan</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="namabidang">
-                                <option>Pilih Bidang</option>
-                                <option>Bidang Studi</option>
-                                <option>Bidang Agama</option>
-                                <option>Bidang Matematika</option>
-                                <option>Program Ma'had</option>
+                                <option>Tk Al-Qur'an</option>
+                                <option>Sd Islam Terpadu</option>
+                                <option>Smp Islam Terpadu</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="">Mata Pelajaran</label>
-                            <input class="form-control" type="text" name="matapelajaran">
+                            <label for="">Mata Pelajaran</label><br>
+                            <textarea class="form-control" name="matapelajaran" id="" cols="30" rows="10"></textarea>
                         </div>
                             <div class="form-group">
                             <button type="submit" class="btn btn-outline-info">

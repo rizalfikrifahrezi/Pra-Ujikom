@@ -82,88 +82,6 @@
 	</header>
 	<!-- Header Section end -->
 
-	<!-- Infor Model -->
-	<div class="infor-model-warp">
-		<div class="infor-model d-flex align-items-center">
-			<div class="infor-close">
-				<i class="material-icons">close</i>
-			</div>
-			<div class="infor-middle">
-				<a href="#" class="infor-logo">
-					<img src="/frontend/ahana/img/logo-2.png" alt="">
-				</a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-				<div class="insta-imgs">
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/1.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/2.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/3.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/4.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/5.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/6.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<form class="infor-form">
-					<input type="text" placeholder="Your Email">
-					<button><img src="/frontend/ahana/img/icons/send.png" alt=""></button>
-				</form>
-				<div class="insta-social">
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-instagram"></i></a>
-					<a href="#"><i class="fa fa-facebook"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Infor Model end -->
-
 	<!-- Page top Section -->
 	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
 		<div class="container">
@@ -181,78 +99,16 @@
 	<section class="events-page-section spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
+                @foreach ($ekstrakurikuler as $item)
+                    <div class="col-lg-4 col-md-6">
 					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/28.jpg" style="height:220px" alt="">
+						<img src="{{asset('assets/img/ekstrakurikuler/' .$item->foto)}}" alt="" height="240px">
 						<div class="bi-text">
-                            <h3 style="height:50px">Pramuka</h3>
+                            <h2><a href="">{{ $item->namaekskul }}</a></h2>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/26.jpg" style="height:220px" alt="">
-						<div class="bi-text">
-                            <h2 style="height:50px">Futsal</h2>
-                        </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/24.png" style="height:220px" alt="">
-						<div class="bi-text">
-                            <h2 style="height:50px">Taekwondo</h2>
-                        </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/29.jpg" style="height:220px" alt="">
-						<div class="bi-text">
-                            <h3 style="height:65px">PMR</h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/30.jpg" style="height:220px" alt="">
-						<div class="bi-text">
-							<h2 style="height:50px">Volly</h2>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/31.jpg" style="height:220px" alt="">
-						<div class="bi-text">
-                            <h2 style="height:50px">Basket</h2>
-                        </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/32.jpg" style="height:220px" alt="">
-						<div class="bi-text">
-                            <h2 style="height:50px">Bulu Tangkis</h2>
-                        </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/33.jpg" style="height:220px" alt="">
-						<div class="bi-text">
-                            <h2 style="height:50px">Pencak Silat</h2>
-                        </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-item">
-						<img src="/frontend/ahana/img/blog/34.jpg" style="height:220px" alt="">
-						<div class="bi-text">
-                            <h2 style="height:50px">Drum Band</h2>
-                        </div>
-					</div>
-				</div>
+                @endforeach
 			</div>
 		</div>
 	</section>

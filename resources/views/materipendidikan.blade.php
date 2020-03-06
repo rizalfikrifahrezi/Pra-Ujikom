@@ -72,89 +72,7 @@
 			</div>
 		</div>
 	</header>
-	<!-- Header Section end -->
-
-	<!-- Infor Model -->
-	<div class="infor-model-warp">
-		<div class="infor-model d-flex align-items-center">
-			<div class="infor-close">
-				<i class="material-icons">close</i>
-			</div>
-			<div class="infor-middle">
-				<a href="#" class="infor-logo">
-					<img src="/frontend/ahana/img/logo-2.png" alt="">
-				</a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-				<div class="insta-imgs">
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/1.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/2.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/3.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/4.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/5.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="/frontend/ahana/img/infor/6.jpg" alt="">
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-								<p>ahana.yoga</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<form class="infor-form">
-					<input type="text" placeholder="Your Email">
-					<button><img src="/frontend/ahana/img/icons/send.png" alt=""></button>
-				</form>
-				<div class="insta-social">
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-instagram"></i></a>
-					<a href="#"><i class="fa fa-facebook"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Infor Model end -->
+    <!-- Header Section end -->
 
 	<!-- Page top Section -->
 	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
@@ -172,95 +90,24 @@
 	<!-- Trainers Section -->
 	<section class="trainers-page-section spad overflow-hidden">
 		<div class="container">
+            <div class="ti-text">
+                    <p></p>
+                    <h2></h2>
+                </div>
 			<div class="row">
-				<div class="col-lg-6">
+                @foreach ($materipendidikan as $item)
+				<div class="col-lg-4">
 					<div class="trainer-item">
-						<div class="ti-img">
-							<img src="/frontend/ahana/img/trainer/7.png" alt="">
+                        <div class="ti-img">
+							<img src="{{asset('assets/img/materipendidikan/' .$item->foto)}}" alt="">
 						</div>
 						<div class="ti-text">
-                            <h4>Bidang Studi</h4>
-                            <p></p>
-                            <h6>1. Matematika</h6>
-                            <h6>2. Bahasa Indonesia</h6>
-                            <h6>3. PPKN</h6>
-                            <h6>4. Ilmu Pengetahuan Sosial</h6>
-                            <h6>5. Ilmu Pengetahuan Alam</h6>
-                            <h6>6. Penjaskes</h6>
-                            <h6>7. Kesenian</h6>
-                            <h6>8. Bahasa Sunda</h6>
-                            <h6>9. Bahasa Inggris</h6>
-                            <h6>10. Seni dan Budaya</h6>
-						</div>
+                            <h4><a>{{ $item->namabidang }}</a></h4>
+                            <h6><a>{!! nl2br($item->matapelajaran) !!}</a></h6>
+                        </div>
 					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="trainer-item">
-						<div class="ti-img">
-							<img src="/frontend/ahana/img/trainer/8.png" alt="">
-						</div>
-						<div class="ti-text">
-                            <h4>Bidang Agama</h4>
-                            <p></p>
-                            <h6>1. Al-Qur'an</h6>
-                            <h6>2. Hadits</h6>
-                            <h6>3. Fiqih</h6>
-                            <h6>4. Aqidah Akhlak</h6>
-                            <h6>5. Aqidah Syariah</h6>
-                            <h6>6. Bahasa Arab</h6>
-                            <h6>7. Sejarah Islam</h6>
-                            <h6>8. Muamalah</h6>
-                            <h6>9. Tauhid</h6>
-                            <h6>10. Tafsir</h6>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="ts-item">
-						<div class="trainer-item">
-							<div class="ti-img">
-								<img src="/frontend/ahana/img/trainer/11.png" alt="">
-							</div>
-							<div class="ti-text">
-                                <h4>Bidang Matematika</h4>
-                                <p></p>
-                                <h6>1. Aritmatika</h6>
-                                <h6>2. Geometri</h6>
-                                <h6>3. Aljabar</h6>
-                                <h6>4. Kalkulus</h6>
-                                <h6>5. Trigometri</h6>
-                                <h6>6. Statistik</h6>
-                                <h6>7. Matematika Murni</h6>
-                                <h6>8. Teori Himpunan</h6>
-                                <h6>9. Logika</h6>
-                                <h6>10. Matematika Terapan</h6>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="ts-item">
-						<div class="trainer-item">
-							<div class="ti-img">
-								<img src="/frontend/ahana/img/trainer/10.png" alt="">
-							</div>
-							<div class="ti-text">
-                                <h4>Program Ma'had</h4>
-                                <p></p>
-                                <h6>1. Nahwu Sorof</h6>
-                                <h6>2. Bahasa Arab</h6>
-                                <h6>3. Bahasa Inggris</h6>
-                                <h6>4. Kitab Kuning</h6>
-                                <h6>5. Muhadhoroh</h6>
-                                <h6>6. Hafalan Do'a</h6>
-                                <h6>7. Murrottal</h6>
-                                <h6>8. Sholat Berjamaah</h6>
-                                <h6>9. Khot</h6>
-                                <h6>10. Hafalan Surat</h6>
-							</div>
-						</div>
-					</div>
-				</div>
+                </div>
+                @endforeach
 			</div>
 		</div>
 	</section>
