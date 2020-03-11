@@ -17,7 +17,7 @@
                     <form action="{{ route('materipendidikan.store') }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="">Pilih Angkatan</label>
+                            <label for="">Pendidikan</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="namabidang">
                                 <option>Tk Al-Qur'an</option>
                                 <option>Sd Islam Terpadu</option>

@@ -20,7 +20,7 @@
                     <table id="bs4-table" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Angkatan</th>
+                                <th>Pendidikan</th>
                                 <th>Mata Pelajaran</th>
                                 <th style="text-align: center;">Bantuan</th>
                             </tr>

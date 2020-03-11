@@ -107,6 +107,14 @@
                         <h4>Lomba Keahlian Tajwid</h4>
                         <p>Lomba ini sudah menjadi kebiasaan bagi warga pesantren., Dalam ilmu Qiraah, tajwid berarti mengeluarkan huruf dari tempatnya dengan memberikan sifat-sifat yang dimilikinya. Jadi ilmu tajwid adalah suatu ilmu yang mempelajari bagaimana cara membunyikan atau mengucapkan huruf-huruf yang terdapat dalam kitab suci Al-Qur'an maupun bukan.</p>
                     </div>
+                    <div class="ci-bottom">
+						<div class="ci-author">
+							<div class="author-text">
+							</div>
+						</div>
+						<a href="trainer-details" class="site-btn sb-gradient">baca ..</a>
+                        <p></p>
+                    </div>
 				</div>
 				<div class="classes-item">
 					<div class="ci-text">
@@ -298,29 +306,26 @@
 					<div class="footer-widget">
 						<div class="about-widget">
                             <div class="col-md-6 d-none d-md-block p-0">
-					<div class="header-info">
-						<i class="material-icons">map</i>
-						<p>Jl. Cilisung No.74, Sukamenak, Bandung</p>
-					</div>
-					<div class="header-info">
-						<i class="material-icons">phone</i>
-						<p>(022) 5415203</p>
-					</div>
-				</div>
+                                <h2 class="heading-title">Visit Us</h2>
+                            <div class="header-info">
+                                <i class="material-icons">map</i>
+                                <p>Jl. Cilisung No.74, Sukamenak, Bandung</p>
+                            </div>
+                            <div class="header-info">
+                                <i class="material-icons">phone</i>
+                                <p>(022) 5415203</p>
+                            </div>
+                        </div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget pl-0 pl-lg-5">
-						<h2 class="fw-title">Artikel Terbaru</h2>
-						<ul>
-							<li><a href="trainer">Materi Pendidikan</a></li>
-							<li><a href="blog">Fasilitas</a></li>
-							<li><a href="about">Ekstrakurikuler</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+                <div class="col-lg-3 ftco-animate">
+                    <div class="pricing-entry pb-4 text-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.2627012752832!2d107.58507001477318!3d-6.978298794958751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9257328d2e5%3A0xbc78bb2943540a25!2sDaarul%20Qolam!5e0!3m2!1sen!2ssg!4v1583914096778!5m2!1sen!2ssg" width="700" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+
 			<div class="footer-bottom">
 				<div class="row">
 					<div class="col-md-4">

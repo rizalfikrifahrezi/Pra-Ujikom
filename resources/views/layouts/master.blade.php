@@ -123,6 +123,11 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
+                <a href="/admin/artikel" class="nav-link">
+                    <p>Artikel</p>
+                  </a>
+                </li>
+                <li class="nav-item">
                 <a href="/admin/materipendidikan" class="nav-link">
                     <p>Materi Pendidikan</p>
                   </a>
@@ -140,6 +145,11 @@
                 <li class="nav-item">
                   <a href="/admin/ekstrakurikuler" class="nav-link">
                     <p>Ekstrakurikuler</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/admin/testimoni" class="nav-link">
+                    <p>Testimoni</p>
                   </a>
                 </li>
                 </ul>

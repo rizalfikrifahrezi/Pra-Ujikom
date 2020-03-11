@@ -16,14 +16,9 @@
                         {{ csrf_field() }}
 
                             <div class="form-group">
-                            <label for="">Pilih Angkatan</label>
-                                <select class="form-control" id="exampleFormControlSelect1" name="namabidang">
-                                    <option {{ $materipendidikan->namabidang == '' ? 'selected' : ''}}>Tk Al-Qur'an</option>
-                                    <option>Sd Islam Terpadu</option>
-                                    <option>Smp Islam Terpadu</option>
-                                </select>
+                                <label for="">Pendidikan</label>
+                                <input class="form-control" type="text" name="namabidang" value="{{ $materipendidikan->namabidang}}" disabled>
                             </div>
-
 
                             <div class="form-group">
                                     <label for="">Mata Pelajaran</label>

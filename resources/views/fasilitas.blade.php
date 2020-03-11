@@ -103,7 +103,7 @@
                         <li class="nav-item has-treeview menu-open">
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                            <a href="/admin/materipendidikan" class="nav-link">
+                            <a href="/admin/fasilitas" class="nav-link">
                                 <p>All</p>
                             </a>
                             </li>
@@ -113,12 +113,12 @@
                             </a>
                             </li>
                             <li class="nav-item">
-                            <a href="/admin/galeri" class="nav-link">
+                            <a href="/admin/fasilitas" class="nav-link">
                                 <p>Ruang Lab</p>
                             </a>
                             </li>
                             <li class="nav-item">
-                            <a href="/admin/ekstrakurikuler" class="nav-link">
+                            <a href="/admin/fasilitas" class="nav-link">
                                 <p>Ekstrakurikuler</p>
                             </a>
                             </li>

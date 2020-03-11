@@ -115,12 +115,6 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item has-treeview menu-open">
-              <a href="/backend/AdminLTE-master/#" class="nav-link active">
-                <p>
-                  Home
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="/admin/materipendidikan" class="nav-link">
@@ -145,12 +139,6 @@
               </ul>
             </li>
             <li class="nav-item has-treeview menu-open">
-              <a href="/backend/AdminLTE-master/#" class="nav-link active">
-                <p>
-                  Forms
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="/admin/pendaftaran" class="nav-link">
